@@ -132,6 +132,8 @@ function displayGallery() {
   ABOUT_PAGE.hidden = true;
   FOOTER.style.setProperty('position', 'absolute');
   IMG_CONTAINER.style.setProperty('display', 'flex');
+  NEXT_IMG_BTN.style.opacity = 0.75;
+  PREV_IMG_BTN.style.opacity = 0.25;
 }
 
 function selectGallery(key) {
