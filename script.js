@@ -154,10 +154,8 @@ function selectGallery(key) {
 function psychofy(str) {
   if (str.includes('psy')) {
     NEXT_IMG_BTN.classList.add('offset');
-    PREV_IMG_BTN.classList.add('psy-arrow');
   } else {
     NEXT_IMG_BTN.classList.remove('offset');
-    PREV_IMG_BTN.classList.remove('psy-arrow');
   }
 }
 
