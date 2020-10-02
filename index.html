@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Nikolay Rademacher</title>
+    <title>Katja Schmelzer</title>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" /
     <meta
@@ -12,19 +12,16 @@
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="/assets/icons/favicon-32x32.png"
+      href="/assets/favicon-32x32.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="/assets/icons/favicon-16x16.png"
+      href="/assets/favicon-16x16.png"
     />
+    <link type="text/css" rel="stylesheet" href="styles/normalize.css" />
     <link type="text/css" rel="stylesheet" href="main.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
-    />
   </head>
   <body class="index">
     <header>
@@ -34,38 +31,50 @@
         <nav>
           <ul>
             <li><a href="/">Home</a></li>
-            <li><a href="/about.html">About</a></li>
+            <li><a href="#" id="about">About</a></li>
             <li>|</li>
-            <li><a href="/botanical.html">Botanical</a></li>
-            <li><a href="/finland.html">Finland</a></li>
-            <li><a href="/forest.html">Forest</a></li>
-            <li><a href="/irland.html">Ireland</a></li>
+            <li><a href="#" class="botanical">Botanical</a></li>
+            <li><a href="#" class="finland">Finland</a></li>
+            <li><a href="#" class="forest">Forest</a></li>
+            <li><a href="#" class="ireland">Ireland</a></li>
             <li>
-              <a href="/psycho.html">Ps<span class="offset">y</span>cho</a>
+              <a href="#" class="psycho">Ps<span class="offset">y</span>cho</a>
             </li>
           </ul>
         </nav>
       </div>
     </header>
 
-    <div class="image-container" id="image-container">
-      <div id="arrow-left"><i class="fas fa-chevron-left"></i></div>
-      <img src="/Galleries/Botanical/b1.jpg" />
-      <div id="arrow-right">
-        <i class="fas fa-chevron-right"></i>
+    <main>
+      <div id="image-container">
+        <div id="arrow-left" class="nav-arrow" title="View previous image">
+          ‹
+        </div>
+        <img id="display-img" src="" />
+        <div id="arrow-right" class="nav-arrow" title="View next image">›</div>
       </div>
-    </div>
+
+      <div id="about-page">
+        <h3>About</h3>
+        <p>&nbsp;</p>
+        <div id="text-content">
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis,
+            neque sequi similique nesciunt quidem deserunt quos deleniti omnis
+            voluptatibus iste velit iusto, in nemo, exercitationem voluptatem
+            rerum autem architecto minus.
+          </p>
+
+          <p><img id="about-img" src="/Galleries/Biography.jpg" alt="" /></p>
+
+          <p>Contact: <a href="mailto:mail@address.com">mail@address.com</a></p>
+        </div>
+      </div>
+    </main>
 
     <footer>
-      <div id="socials">
-        <a href="#" class="social-btn" id="twitter" title="Share on Twitter"
-          ><i class="fab fa-twitter"></i
-        ></a>
-        <a href="#" class="social-btn" id="facebook" title="Share on Facebook"
-          ><i class="fab fa-facebook"></i
-        ></a>
-      </div>
-      <div id="rights">Katja Schmelzer. 2020.</div>
+      <div id="rights">&copy; 2020</div>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>

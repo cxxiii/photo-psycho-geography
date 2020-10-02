@@ -1,30 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Mate&display=swap');
 
 :root {
-  --botanical: #468138;
-  --finland: #002f6c;
-  --forest: #228b22;
-  --ireland: #40c575;
-  --psycho: #fd209a;
+  --bot: #468138;
+  --fin: #002f6c;
+  --for: #228b22;
+  --ire: #40c575;
+  --psy: #fd209a;
 }
 
-.offset {
-  animation: letter-flicker 2s linear infinite;
-}
-
-.transition {
-  -moz-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  -webkit-transition: all 0.2s ease;
-  -ms-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-}
-.no-select {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -khtml-user-select: none;
-}
-
+/* HEADER START */
 #navigation {
   width: 100%;
   position: relative;
@@ -32,9 +16,8 @@
 }
 
 nav {
-  display: block;
-  margin-top: -15px;
-  margin-left: 162px;
+  margin-top: -1rem;
+  margin-left: 163px;
 }
 
 nav:after {
@@ -61,8 +44,8 @@ nav ul li a {
   transition: all 0.2s ease;
 }
 nav ul li a:hover {
-  color: #468138;
-  font-size: 1.75em;
+  color: whitesmoke;
+  font-size: 1.5em;
   font-family: 'Cinzel', serif;
   font-weight: 100;
   text-shadow: 0 0 3px black;
@@ -71,9 +54,26 @@ nav ul li a:hover {
   -webkit-transition: all 0.5s ease;
   -ms-transition: all 0.5s ease;
   transition: all 0.5s ease;
-  animation: text-flicker 3s ease infinite;
 }
 
+header {
+  height: 100%;
+  margin-bottom: 2.75rem;
+}
+
+header h1 {
+  letter-spacing: 4px;
+  font-weight: 200;
+}
+header h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 1.25em;
+  font-weight: 100;
+  letter-spacing: 2px;
+}
+/* HEADER END */
+
+/* MAIN START */
 body {
   color: whitesmoke;
   background: black;
@@ -88,32 +88,34 @@ body {
 
 #text-content {
   max-width: 600px;
-  margin: auto 30%;
-  padding-top: 0;
+  margin: auto;
   text-align: justify;
+  margin-bottom: 2.5rem;
 }
 
 #text-content img {
   width: 100%;
 }
 
-header {
-  height: 100%;
-  margin-bottom: 60px;
-}
-
-header h1 {
-  letter-spacing: 4px;
-  font-weight: 200;
-}
-
-a:hover {
-  background: none;
+#text-content a {
+  color: #bbb;
 }
 
 a,
 li {
   color: rgb(60, 60, 60);
+}
+
+h1 {
+  font-family: 'Cinzel', serif;
+  font-size: 2em;
+  text-align: center;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+#pp {
+  font-size: 0.75em;
 }
 
 h2,
@@ -124,82 +126,94 @@ h3 {
 }
 
 /* IMAGE CONTAINER START */
-.image-container {
-  margin: 10px 25%;
+#image-container {
   display: flex;
   justify-content: space-evenly;
 }
 
-.image-container img {
-  width: 100%;
-  margin-top: 5px;
+#image-container img {
+  max-width: 1000px;
+  max-height: 560px;
+}
+
+.nav-arrow {
+  font-family: 'Cinzel', serif;
+  font-weight: lighter;
+  font-size: 6em;
+  margin-top: 12rem;
+  cursor: pointer;
 }
 
 #arrow-right {
-  font-size: 75px;
-  color: whitesmoke;
-  margin-left: 100px;
-  margin-top: 150px;
+  margin-left: 7.5rem;
   opacity: 0.75;
+  font-weight: 100;
 }
 #arrow-left {
-  font-size: 75px;
-  color: whitesmoke;
-  margin-right: 100px;
-  margin-top: 150px;
-  opacity: 0.75;
+  margin-right: 7.5rem;
+  opacity: 0.25;
+  font-weight: 100;
 }
 /* IMAGE CONTAINER END */
-
-h1 {
-  font-family: 'Cinzel', serif;
-  font-size: 2em;
-  text-align: center;
-  margin-top: 24px;
-  margin-bottom: 16px;
-}
-
-#pp {
-  /* font-family: 'Mate', sans-serif; */
-  font-size: 0.75em;
-}
-
-header h2 {
-  font-family: 'Cinzel', serif;
-  font-size: 1.25em;
-  font-weight: 100;
-  letter-spacing: 2px;
-}
+/* MAIN END */
 
 /* FOOTER START */
 footer {
-  float: inherit;
-  max-width: 600px;
-  margin: auto;
-  margin-top: 3em;
-  position: relative;
-
+  position: absolute;
   width: 100%;
-  height: 2.5rem;
+  bottom: 1.5rem;
 }
 
 #rights {
-  margin-top: 3em;
-  margin-bottom: 1.5em;
   font-size: small;
   opacity: 0.5;
 }
-
-#socials {
-  font-size: 1.5rem;
-}
-
-.social-btn {
-  margin: 0.25em;
-}
 /* FOOTER END */
 
-/* ANIMATIONS START */
+/* TRANSITIONS & ANIMATIONS START */
+
+a:hover {
+  background: none;
+}
+
+[class*='botanical']:hover {
+  color: var(--bot);
+}
+[class*='finland']:hover {
+  color: var(--fin);
+}
+[class*='forest']:hover {
+  color: var(--for);
+}
+[class*='ireland']:hover {
+  color: var(--ire);
+}
+[class*='psycho']:hover {
+  color: var(--psy);
+  animation: text-flicker 3s ease infinite;
+}
+
+.psy-arrow {
+  animation: text-flicker 3s ease infinite;
+}
+
+.offset {
+  animation: letter-flicker 2s linear infinite;
+}
+
+.transition {
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.no-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+}
+
 @keyframes text-flicker {
   0% {
     opacity: 0.1;
