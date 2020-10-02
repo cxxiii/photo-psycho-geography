@@ -83,16 +83,6 @@ let currentImg;
 
 document.addEventListener('keydown', navByArrowKeys);
 
-function navByArrowKeys(e) {
-  if (e.code === 'ArrowRight') {
-    displayNextImg();
-  } else if (e.code === 'ArrowLeft') {
-    displayPrevImg();
-  } else {
-    return;
-  }
-}
-
 NAV_ARROWS.hidden = true;
 PREV_IMG_BTN.hidden = true;
 NEXT_IMG_BTN.hidden = true;
@@ -102,6 +92,7 @@ ABOUT.addEventListener('click', function () {
   IMG_CONTAINER.style.setProperty('display', 'none');
   FOOTER.style.setProperty('position', 'relative');
   ABOUT_PAGE.hidden = false;
+  activeGallery = undefined;
 });
 BOTANICAL.addEventListener('click', function () {
   selectGallery(0);
