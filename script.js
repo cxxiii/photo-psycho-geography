@@ -128,7 +128,7 @@ PREV_IMG_BTN.addEventListener('click', displayPrevImg);
 document.addEventListener('keydown', navByArrowKeys);
 
 function navByArrowKeys(e) {
-  if (activeGallery) {
+  if (activeGallery !== undefined) {
     if (e.code === 'ArrowRight') {
       displayNextImg();
     } else if (e.code === 'ArrowLeft') {
@@ -183,7 +183,6 @@ function displayPrevImg() {
   currentImg--;
   DISPLAY_IMG.src = `/Galleries/${DIRECTORIES[activeGallery]}${currentImg}.jpg`;
   NEXT_IMG_BTN.style.opacity = 0.75;
-  console.log(DISPLAY_IMG.src);
 }
 
 function displayRandomImg() {
