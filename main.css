@@ -86,8 +86,9 @@ body {
   justify-content: center;
 }
 
+/* ABOUT PAGE START */
 #text-content {
-  max-width: 600px;
+  max-width: 560px;
   margin: auto;
   text-align: justify;
   margin-bottom: 2.5rem;
@@ -100,6 +101,7 @@ body {
 #text-content a {
   color: #bbb;
 }
+/* ABOUT PAGE END */
 
 a,
 li {
