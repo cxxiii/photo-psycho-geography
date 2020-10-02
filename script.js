@@ -76,6 +76,7 @@ const NEXT_IMG_BTN = document.querySelector('#arrow-right');
 
 const IMG_CONTAINER = document.querySelector('#image-container');
 const ABOUT_PAGE = document.querySelector('#about-page');
+const FOOTER = document.querySelector('footer');
 
 let activeGallery;
 let currentImg;
@@ -99,6 +100,7 @@ ABOUT_PAGE.hidden = true;
 
 ABOUT.addEventListener('click', function () {
   IMG_CONTAINER.style.setProperty('display', 'none');
+  FOOTER.style.setProperty('position', 'relative');
   ABOUT_PAGE.hidden = false;
 });
 BOTANICAL.addEventListener('click', function () {
@@ -137,6 +139,7 @@ function navByArrowKeys(e) {
 
 function displayGallery() {
   ABOUT_PAGE.hidden = true;
+  FOOTER.style.setProperty('position', 'absolute');
   IMG_CONTAINER.style.setProperty('display', 'flex');
 }
 
