@@ -128,13 +128,13 @@ PREV_IMG_BTN.addEventListener('click', displayPrevImg);
 document.addEventListener('keydown', navByArrowKeys);
 
 function navByArrowKeys(e) {
-  if (e.code === 'ArrowRight') {
-    displayNextImg();
-  } else if (e.code === 'ArrowLeft') {
-    displayPrevImg();
-  } else {
-    return;
-  }
+  if (activeGallery) {
+    if (e.code === 'ArrowRight') {
+      displayNextImg();
+    } else if (e.code === 'ArrowLeft') {
+      displayPrevImg();
+    } else return;
+  } else return;
 }
 
 function displayGallery() {
