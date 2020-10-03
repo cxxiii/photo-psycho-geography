@@ -126,6 +126,7 @@ h1 {
 #pp {
   font-size: 0.75em;
   letter-spacing: 0.04em;
+  filter: brightness(150%);
 }
 
 h2,
@@ -137,8 +138,7 @@ h3 {
 
 /* IMAGE CONTAINER START */
 #image-container {
-  display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 
 #image-container img {
@@ -147,20 +147,26 @@ h3 {
 
 .nav-arrow {
   font-family: 'Cinzel', serif;
-  font-size: 6em;
-  margin-top: 12rem;
+  font-size: 4.5em;
+  margin: auto;
+  margin-top: 18rem;
   cursor: pointer;
+  line-height: 0;
+  filter: brightness(150%);
 }
 
 #arrow-right {
-  margin-left: 7.5rem;
+  margin-right: 3rem;
   opacity: 0.75;
   font-weight: 100;
+  float: right;
 }
 #arrow-left {
-  margin-right: 7.5rem;
+  margin-left: 3rem;
+
   opacity: 0.25;
   font-weight: 100;
+  float: left;
 }
 
 #return-arrow {

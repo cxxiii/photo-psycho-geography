@@ -70,6 +70,8 @@ let currentImg;
 // PAGE ELEMENTS
 const HEADER = document.querySelector('header');
 const HEADING = document.querySelector('header h1');
+const SUB_HEADING = document.querySelector('#pp');
+const SUB_HEADING_PSY = document.querySelector('#psycho');
 const ABOUT = document.querySelector('#about');
 const BOTANICAL = document.querySelector('.botanical');
 const FINLAND = document.querySelector('.finland');
@@ -85,11 +87,9 @@ const RETURN_BTN = document.querySelector('#return-arrow');
 
 const IMG_CONTAINER = document.querySelector('#image-container');
 const ABOUT_PAGE = document.querySelector('#about-page');
-const FOOTER = document.querySelector('footer');
 
 RETURN_BTN.hidden = true;
 HEADER.hidden = false;
-FOOTER.hidden = true;
 NAV_ARROWS.hidden = true;
 PREV_IMG_BTN.hidden = true;
 NEXT_IMG_BTN.hidden = true;
@@ -97,9 +97,9 @@ ABOUT_PAGE.hidden = true;
 
 // EVENT LISTENERS
 ABOUT.addEventListener('click', function () {
-  HEADING.style.color = 'var(--default)';
+  SUB_HEADING.style.color = 'var(--default)';
   IMG_CONTAINER.style.setProperty('display', 'none');
-  FOOTER.style.setProperty('position', 'relative');
+
   ABOUT_PAGE.hidden = false;
   activeGallery = undefined;
 });
@@ -140,7 +140,6 @@ function navByArrowKeys(e) {
 
 function displayGallery() {
   ABOUT_PAGE.hidden = true;
-  FOOTER.style.setProperty('position', 'absolute');
   IMG_CONTAINER.style.setProperty('display', 'flex');
   NEXT_IMG_BTN.style.opacity = 0.75;
   PREV_IMG_BTN.style.opacity = 0.25;
@@ -150,7 +149,7 @@ function selectGallery(key) {
   activeGallery = key;
   PREV_IMG_BTN.hidden = false;
   NEXT_IMG_BTN.hidden = false;
-  HEADING.style.color = `var(--${DIRECTORIES[key].slice(0, 3)})`;
+  SUB_HEADING.style.color = `var(--${DIRECTORIES[key].slice(0, 3)})`;
   PREV_IMG_BTN.style.color = `var(--${DIRECTORIES[key].slice(0, 3)})`;
   NEXT_IMG_BTN.style.color = `var(--${DIRECTORIES[key].slice(0, 3)})`;
   psychofy(DIRECTORIES[key]);
@@ -160,11 +159,13 @@ function selectGallery(key) {
 
 function psychofy(str) {
   if (str.includes('psy')) {
-    HEADING.classList.add('psy-text');
-    NEXT_IMG_BTN.classList.add('offset');
+    SUB_HEADING.classList.add('psy-text');
+    SUB_HEADING_PSY.classList.add('offset');
+    NEXT_IMG_BTN.classList.add('psy-text');
   } else {
-    HEADING.classList.remove('psy-text');
-    NEXT_IMG_BTN.classList.remove('offset');
+    SUB_HEADING.classList.remove('psy-text');
+    SUB_HEADING_PSY.classList.remove('offset');
+    NEXT_IMG_BTN.classList.remove('psy-text');
   }
 }
 
