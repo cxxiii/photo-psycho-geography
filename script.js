@@ -88,7 +88,7 @@ const FOOTER = document.querySelector('footer');
 
 RETURN_BTN.hidden = true;
 HEADER.hidden = false;
-FOOTER.hidden = false;
+FOOTER.hidden = true;
 NAV_ARROWS.hidden = true;
 PREV_IMG_BTN.hidden = true;
 NEXT_IMG_BTN.hidden = true;
