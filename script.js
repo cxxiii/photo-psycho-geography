@@ -1,3 +1,4 @@
+// DATA CONSTANTS
 const GALLERIES = [
   [
     1,
@@ -62,6 +63,11 @@ const DIRECTORIES = {
   4: 'psycho/p',
 };
 
+// GLOBAL VARIABLES
+let activeGallery;
+let currentImg;
+
+// PAGE ELEMENTS
 const ABOUT = document.querySelector('#about');
 const BOTANICAL = document.querySelector('.botanical');
 const FINLAND = document.querySelector('.finland');
@@ -78,16 +84,12 @@ const IMG_CONTAINER = document.querySelector('#image-container');
 const ABOUT_PAGE = document.querySelector('#about-page');
 const FOOTER = document.querySelector('footer');
 
-let activeGallery;
-let currentImg;
-
-document.addEventListener('keydown', navByArrowKeys);
-
 NAV_ARROWS.hidden = true;
 PREV_IMG_BTN.hidden = true;
 NEXT_IMG_BTN.hidden = true;
 ABOUT_PAGE.hidden = true;
 
+// EVENT LISTENERS
 ABOUT.addEventListener('click', function () {
   IMG_CONTAINER.style.setProperty('display', 'none');
   FOOTER.style.setProperty('position', 'relative');
@@ -118,6 +120,7 @@ NEXT_IMG_BTN.addEventListener('click', displayNextImg);
 PREV_IMG_BTN.addEventListener('click', displayPrevImg);
 document.addEventListener('keydown', navByArrowKeys);
 
+// FUNCTIONS
 function navByArrowKeys(e) {
   if (activeGallery !== undefined) {
     if (e.code === 'ArrowRight') {
