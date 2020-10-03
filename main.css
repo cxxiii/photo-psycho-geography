@@ -169,13 +169,13 @@ h3 {
 
 /* FOOTER START */
 footer {
-  position: absolute;
+  position: relative;
   width: 100%;
-  bottom: 1.5rem;
+  bottom: 0.75rem;
 }
 
 #rights {
-  font-size: 0.67em;
+  font-size: 0.75em;
   opacity: 0.33;
 }
 /* FOOTER END */
