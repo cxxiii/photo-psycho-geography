@@ -68,6 +68,7 @@ let activeGallery;
 let currentImg;
 
 // PAGE ELEMENTS
+const HEADER = document.querySelector('header');
 const ABOUT = document.querySelector('#about');
 const BOTANICAL = document.querySelector('.botanical');
 const FINLAND = document.querySelector('.finland');
@@ -79,11 +80,15 @@ const DISPLAY_IMG = document.querySelector('#display-img');
 const NAV_ARROWS = document.querySelectorAll('.nav-arrow');
 const PREV_IMG_BTN = document.querySelector('#arrow-left');
 const NEXT_IMG_BTN = document.querySelector('#arrow-right');
+const RETURN_BTN = document.querySelector('#return-arrow');
 
 const IMG_CONTAINER = document.querySelector('#image-container');
 const ABOUT_PAGE = document.querySelector('#about-page');
 const FOOTER = document.querySelector('footer');
 
+RETURN_BTN.hidden = true;
+HEADER.hidden = false;
+FOOTER.hidden = false;
 NAV_ARROWS.hidden = true;
 PREV_IMG_BTN.hidden = true;
 NEXT_IMG_BTN.hidden = true;
