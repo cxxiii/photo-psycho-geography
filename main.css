@@ -84,9 +84,6 @@ body {
   font-family: 'EB Garamond', serif;
   font-size: 1em;
   text-align: center;
-  display: block;
-  align-items: center;
-  justify-content: center;
 }
 
 /* ABOUT PAGE START */
@@ -94,7 +91,6 @@ body {
   max-width: 560px;
   margin: auto;
   text-align: justify;
-  margin-bottom: 2.5rem;
 }
 
 #text-content img {
@@ -124,9 +120,8 @@ h1 {
 }
 
 #pp {
-  font-size: 0.75em;
+  font-size: 24px;
   letter-spacing: 0.04em;
-  filter: brightness(150%);
 }
 
 h2,
@@ -138,11 +133,39 @@ h3 {
 
 /* IMAGE CONTAINER START */
 #image-container {
+  display: flex;
   justify-content: center;
+  text-align: justify;
 }
 
 #image-container img {
   max-height: 80vh;
+}
+
+#display-img {
+  animation: fadeIn ease 2s;
+  position: absolute;
+}
+
+aside {
+  font-size: 13px;
+  bottom: 30px;
+  right: 30px;
+  position: absolute;
+  font-style: italic;
+  font-weight: lighter;
+  /* color: rgb(60, 60, 60); */
+  animation: fadeIn ease 4s;
+}
+
+.one {
+  animation: fadeIn ease 6s;
+}
+.two {
+  animation: fadeIn ease 8s;
+}
+.three {
+  animation: fadeIn ease 12s;
 }
 
 .nav-arrow {
@@ -180,20 +203,23 @@ h3 {
 /* IMAGE CONTAINER END */
 /* MAIN END */
 
-/* FOOTER START */
-footer {
-  position: absolute;
-  width: 100%;
-  bottom: 0.75rem;
-}
-
-#rights {
-  font-size: 0.75em;
-  opacity: 0.33;
-}
-/* FOOTER END */
-
 /* TRANSITIONS & ANIMATIONS START */
+
+.fade-in {
+  animation: fadeIn ease 3s;
+  -webkit-animation: fadeIn ease 10s;
+  -moz-animation: fadeIn ease 10s;
+  -o-animation: fadeIn ease 10s;
+  -ms-animation: fadeIn ease 10s;
+}
+
+.fade-out {
+  animation: fadeOut ease 3s;
+  -webkit-animation: fadeOut ease 8s;
+  -moz-animation: fadeOut ease 8s;
+  -o-animation: fadeOut ease 8s;
+  -ms-animation: fadeOut ease 8s;
+}
 
 a:hover {
   background: none;
@@ -204,6 +230,7 @@ a:hover {
 }
 [class*='finland']:hover {
   color: var(--fin);
+  filter: brightness(150%);
 }
 [class*='forest']:hover {
   color: var(--for);
@@ -235,10 +262,101 @@ a:hover {
   -ms-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
+
 .no-select {
   -webkit-user-select: none;
   -moz-user-select: none;
   -khtml-user-select: none;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-o-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-ms-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 @keyframes text-flicker {

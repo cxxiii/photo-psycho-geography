@@ -79,15 +79,19 @@ const FOREST = document.querySelector('.forest');
 const IRELAND = document.querySelector('.ireland');
 const PSYCHO = document.querySelector('.psycho');
 
-const DISPLAY_IMG = document.querySelector('#display-img');
+const DISPLAY_IMG = document.querySelector('#image-container #display-img');
 const NAV_ARROWS = document.querySelectorAll('.nav-arrow');
 const PREV_IMG_BTN = document.querySelector('#arrow-left');
 const NEXT_IMG_BTN = document.querySelector('#arrow-right');
 const RETURN_BTN = document.querySelector('#return-arrow');
 
 const IMG_CONTAINER = document.querySelector('#image-container');
+const IMG_CAPTION = document.querySelector('aside');
 const ABOUT_PAGE = document.querySelector('#about-page');
 
+const GALLERY_COLOR = document.getElementsByClassName('gal-col');
+
+IMG_CAPTION.hidden = true;
 RETURN_BTN.hidden = true;
 HEADER.hidden = false;
 NAV_ARROWS.hidden = true;
@@ -128,9 +132,16 @@ PREV_IMG_BTN.addEventListener('click', displayPrevImg);
 document.addEventListener('keydown', navByArrowKeys);
 
 // FUNCTIONS
+function resetAnimation() {
+  DISPLAY_IMG.style.animation = 'none';
+  DISPLAY_IMG.offsetHeight; /* trigger reflow */
+  DISPLAY_IMG.style.animation = null;
+}
+
 function navByArrowKeys(e) {
   if (activeGallery !== undefined) {
     if (e.code === 'ArrowRight') {
+      DISPLAY_IMG.style.animation = 'fadeOut ease 4s';
       displayNextImg();
     } else if (e.code === 'ArrowLeft') {
       displayPrevImg();
@@ -138,9 +149,17 @@ function navByArrowKeys(e) {
   } else return;
 }
 
+function resetCaptionTimer() {
+  IMG_CAPTION.hidden = true;
+  setTimeout(function () {
+    IMG_CAPTION.hidden = false;
+  }, 2000);
+}
+
 function displayGallery() {
   ABOUT_PAGE.hidden = true;
   IMG_CONTAINER.style.setProperty('display', 'flex');
+  resetCaptionTimer();
   NEXT_IMG_BTN.style.opacity = 0.75;
   PREV_IMG_BTN.style.opacity = 0.25;
 }
@@ -152,9 +171,16 @@ function selectGallery(key) {
   SUB_HEADING.style.color = `var(--${DIRECTORIES[key].slice(0, 3)})`;
   PREV_IMG_BTN.style.color = `var(--${DIRECTORIES[key].slice(0, 3)})`;
   NEXT_IMG_BTN.style.color = `var(--${DIRECTORIES[key].slice(0, 3)})`;
+  setGalleryColorTxt(`var(--${DIRECTORIES[key].slice(0, 3)})`);
   psychofy(DIRECTORIES[key]);
   currentImg = GALLERIES[key][0];
   DISPLAY_IMG.src = `/Galleries/${DIRECTORIES[key]}${currentImg}.jpg`;
+}
+
+function setGalleryColorTxt(str) {
+  for (i = 0; i < GALLERY_COLOR.length; i++) {
+    GALLERY_COLOR[i].style.color = str;
+  }
 }
 
 function psychofy(str) {
@@ -176,9 +202,10 @@ function displayNextImg() {
   }
   if (currentImg + 1 > GALLERIES[activeGallery].length) return;
   currentImg++;
-  DISPLAY_IMG.src = `/Galleries/${DIRECTORIES[activeGallery]}${currentImg}.jpg`;
   PREV_IMG_BTN.style.opacity = 0.75;
-  console.log(DISPLAY_IMG.src);
+  resetAnimation();
+  resetCaptionTimer();
+  DISPLAY_IMG.src = `/Galleries/${DIRECTORIES[activeGallery]}${currentImg}.jpg`;
 }
 
 function displayPrevImg() {
@@ -188,13 +215,17 @@ function displayPrevImg() {
   }
   if (currentImg - 1 === 0) return;
   currentImg--;
-  DISPLAY_IMG.src = `/Galleries/${DIRECTORIES[activeGallery]}${currentImg}.jpg`;
+
   NEXT_IMG_BTN.style.opacity = 0.75;
+  resetAnimation();
+  resetCaptionTimer();
+  DISPLAY_IMG.src = `/Galleries/${DIRECTORIES[activeGallery]}${currentImg}.jpg`;
 }
 
 function displayRandomImg() {
   let randomGallery = Math.floor(Math.random() * 4);
   let imgVar = Math.floor(Math.random() * GALLERIES[randomGallery].length) + 1;
+  DISPLAY_IMG.style.animation = 'none';
   DISPLAY_IMG.src = `/Galleries/${DIRECTORIES[randomGallery]}${imgVar}.jpg`;
 }
 
