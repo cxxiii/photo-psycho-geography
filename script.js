@@ -69,6 +69,7 @@ let currentImg;
 
 // PAGE ELEMENTS
 const HEADER = document.querySelector('header');
+const HEADING = document.querySelector('header h1');
 const ABOUT = document.querySelector('#about');
 const BOTANICAL = document.querySelector('.botanical');
 const FINLAND = document.querySelector('.finland');
@@ -96,6 +97,7 @@ ABOUT_PAGE.hidden = true;
 
 // EVENT LISTENERS
 ABOUT.addEventListener('click', function () {
+  HEADING.style.color = 'var(--default)';
   IMG_CONTAINER.style.setProperty('display', 'none');
   FOOTER.style.setProperty('position', 'relative');
   ABOUT_PAGE.hidden = false;
@@ -148,6 +150,7 @@ function selectGallery(key) {
   activeGallery = key;
   PREV_IMG_BTN.hidden = false;
   NEXT_IMG_BTN.hidden = false;
+  HEADING.style.color = `var(--${DIRECTORIES[key].slice(0, 3)})`;
   PREV_IMG_BTN.style.color = `var(--${DIRECTORIES[key].slice(0, 3)})`;
   NEXT_IMG_BTN.style.color = `var(--${DIRECTORIES[key].slice(0, 3)})`;
   psychofy(DIRECTORIES[key]);
@@ -157,8 +160,10 @@ function selectGallery(key) {
 
 function psychofy(str) {
   if (str.includes('psy')) {
+    HEADING.classList.add('psy-text');
     NEXT_IMG_BTN.classList.add('offset');
   } else {
+    HEADING.classList.remove('psy-text');
     NEXT_IMG_BTN.classList.remove('offset');
   }
 }

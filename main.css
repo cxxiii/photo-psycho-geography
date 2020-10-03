@@ -1,6 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Mate&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=EB+Garamond&display=swap');
 
 :root {
+  --default: whitesmoke;
   --bot: #468138;
   --fin: #002f6c;
   --for: #228b22;
@@ -17,7 +18,7 @@
 
 nav {
   margin-top: -1rem;
-  margin-left: 163px;
+  margin-left: 60px;
 }
 
 nav:after {
@@ -27,11 +28,11 @@ nav:after {
 nav ul li {
   display: inline;
   position: relative;
-  margin-left: 20px;
+  margin-left: 1em;
 }
 
 nav ul li a {
-  font-size: 14px;
+  font-size: 1em;
   font-weight: bold;
   text-decoration: none;
 }
@@ -80,7 +81,7 @@ body {
   color: whitesmoke;
   background: black;
   margin: 0 auto;
-  font-family: 'Mate', sans-serif;
+  font-family: 'EB Garamond', serif;
   font-size: 1em;
   text-align: center;
   display: block;
@@ -118,8 +119,13 @@ h1 {
   margin-bottom: 1rem;
 }
 
+#name {
+  letter-spacing: -0.04em;
+}
+
 #pp {
   font-size: 0.75em;
+  letter-spacing: 0.04em;
 }
 
 h2,
@@ -201,6 +207,10 @@ a:hover {
 }
 [class*='psycho']:hover {
   color: var(--psy);
+  animation: text-flicker 3s ease infinite;
+}
+
+.psy-text {
   animation: text-flicker 3s ease infinite;
 }
 
