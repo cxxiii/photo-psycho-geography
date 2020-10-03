@@ -58,6 +58,7 @@ nav ul li a:hover {
 }
 
 header {
+  margin-top: 1.5rem;
   height: 100%;
   margin-bottom: 3rem;
 }
