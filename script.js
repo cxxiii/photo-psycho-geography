@@ -97,13 +97,12 @@ HEADER.hidden = false;
 NAV_ARROWS.hidden = true;
 PREV_IMG_BTN.hidden = true;
 NEXT_IMG_BTN.hidden = true;
-ABOUT_PAGE.hidden = true;
 
 // EVENT LISTENERS
 ABOUT.addEventListener('click', function () {
   SUB_HEADING.style.color = 'var(--default)';
   IMG_CONTAINER.style.setProperty('display', 'none');
-  ABOUT_PAGE.hidden = false;
+  ABOUT_PAGE.style.setProperty('display', 'initial');
   activeGallery = undefined;
 });
 BOTANICAL.addEventListener('click', function () {
@@ -155,7 +154,7 @@ function resetCaptionTimer() {
 }
 
 function displayGallery() {
-  ABOUT_PAGE.hidden = true;
+  ABOUT_PAGE.style.setProperty('display', 'none');
   IMG_CONTAINER.style.setProperty('display', 'flex');
   resetCaptionTimer();
   NEXT_IMG_BTN.style.opacity = 0.75;
