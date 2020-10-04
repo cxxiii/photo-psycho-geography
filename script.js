@@ -92,19 +92,11 @@ const ABOUT_PAGE = document.querySelector('#about-page');
 const GALLERY_COLOR = document.getElementsByClassName('gal-col');
 
 IMG_CAPTION.hidden = true;
-RETURN_BTN.hidden = true;
+
 HEADER.hidden = false;
-NAV_ARROWS.hidden = true;
-PREV_IMG_BTN.hidden = true;
-NEXT_IMG_BTN.hidden = true;
 
 // EVENT LISTENERS
-ABOUT.addEventListener('click', function () {
-  SUB_HEADING.style.color = 'var(--default)';
-  IMG_CONTAINER.style.setProperty('display', 'none');
-  ABOUT_PAGE.style.setProperty('display', 'initial');
-  activeGallery = undefined;
-});
+ABOUT.addEventListener('click', displayAboutPage);
 BOTANICAL.addEventListener('click', function () {
   selectGallery(0);
   displayGallery();
@@ -130,6 +122,15 @@ PREV_IMG_BTN.addEventListener('click', displayPrevImg);
 document.addEventListener('keydown', navByArrowKeys);
 
 // FUNCTIONS
+
+function displayAboutPage() {
+  SUB_HEADING.style.color = 'var(--default)';
+  IMG_CONTAINER.style.setProperty('display', 'none');
+  hideNavArrows();
+  ABOUT_PAGE.style.setProperty('display', 'initial');
+  activeGallery = undefined;
+}
+
 function resetAnimation() {
   DISPLAY_IMG.style.animation = 'none';
   DISPLAY_IMG.offsetHeight; /* trigger reflow */
@@ -156,6 +157,7 @@ function resetCaptionTimer() {
 function displayGallery() {
   ABOUT_PAGE.style.setProperty('display', 'none');
   IMG_CONTAINER.style.setProperty('display', 'flex');
+  displayNavArrows();
   resetCaptionTimer();
   NEXT_IMG_BTN.style.opacity = 0.75;
   PREV_IMG_BTN.style.opacity = 0.25;
@@ -163,8 +165,6 @@ function displayGallery() {
 
 function selectGallery(key) {
   activeGallery = key;
-  PREV_IMG_BTN.hidden = false;
-  NEXT_IMG_BTN.hidden = false;
   SUB_HEADING.style.color = `var(--${DIRECTORIES[key].slice(0, 3)})`;
   PREV_IMG_BTN.style.color = `var(--${DIRECTORIES[key].slice(0, 3)})`;
   NEXT_IMG_BTN.style.color = `var(--${DIRECTORIES[key].slice(0, 3)})`;
@@ -177,6 +177,17 @@ function selectGallery(key) {
 function setGalleryColorTxt(str) {
   for (i = 0; i < GALLERY_COLOR.length; i++) {
     GALLERY_COLOR[i].style.color = str;
+  }
+}
+
+function displayNavArrows() {
+  for (i = 0; i < NAV_ARROWS.length; i++) {
+    NAV_ARROWS[i].style.setProperty('display', 'initial');
+  }
+}
+function hideNavArrows() {
+  for (i = 0; i < NAV_ARROWS.length; i++) {
+    NAV_ARROWS[i].style.setProperty('display', 'none');
   }
 }
 

@@ -175,32 +175,33 @@ aside {
 
 .nav-arrow {
   font-family: 'Cinzel', serif;
-  font-size: 6em;
+  font-size: 4.5em;
   margin-top: 36vh;
   cursor: pointer;
   line-height: 0;
+  display: none;
 }
 
 #arrow-right {
-  margin-right: 12vw;
+  margin-right: 9vw;
   opacity: 0.75;
   font-weight: 100;
   float: right;
 }
 #arrow-left {
-  margin-left: 12vw;
+  margin-left: 9vw;
   opacity: 0.25;
   font-weight: 100;
   float: left;
 }
 
-#return-arrow {
+/* #return-arrow {
   transform: rotate(-90deg);
   margin-top: 2.5rem;
   margin-bottom: 5rem;
   opacity: 0.75;
   line-height: 0;
-}
+} */
 
 /* IMAGE CONTAINER END */
 /* MAIN END */
