@@ -59,7 +59,7 @@ nav ul li a:hover {
 }
 
 header {
-  height: 76px;
+  height: auto;
 }
 
 header h1 {
