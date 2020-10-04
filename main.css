@@ -59,7 +59,7 @@ nav ul li a:hover {
 }
 
 header {
-  height: auto;
+  height: 78px;
 }
 
 header h1 {
@@ -146,7 +146,7 @@ h3 {
 }
 
 aside {
-  font-size: 14px;
+  font-size: 13px;
   bottom: 28px;
   right: 40px;
   position: absolute;
@@ -452,17 +452,3 @@ a:hover {
   }
 }
 /* ANIMATIONS END */
-
-@media screen and (max-width: 1000px) {
-  header {
-    height: auto;
-  }
-
-  main {
-    margin: auto 10px;
-  }
-
-  body {
-    margin: 0;
-  }
-}
