@@ -153,6 +153,7 @@ h3 {
   animation: fadeIn ease 2s;
 }
 
+/* IMAGE CAPTION */
 aside {
   font-size: 13px;
   bottom: 3vh;
@@ -189,6 +190,7 @@ aside {
   font-weight: 100;
   float: right;
 }
+
 #arrow-left {
   margin-left: 4vw;
   opacity: 0.25;
@@ -204,11 +206,7 @@ aside {
   line-height: 0;
 } */
 
-/* IMAGE CONTAINER END */
-/* MAIN END */
-
-/* TRANSITIONS & ANIMATIONS START */
-
+/* TRANSITIONS & ANIMATIONS */
 .fade-in {
   animation: fadeIn ease 3s;
   -webkit-animation: fadeIn ease 10s;
@@ -458,7 +456,6 @@ a:hover {
     text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
   }
 }
-/* ANIMATIONS END */
 
 @media screen and (max-width: 1000px) {
   #image-container img {
