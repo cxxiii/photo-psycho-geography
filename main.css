@@ -59,8 +59,7 @@ nav ul li a:hover {
 }
 
 header {
-  height: 88px;
-  z-index: 2;
+  height: auto;
 }
 
 header h1 {
@@ -128,6 +127,10 @@ h1 {
   letter-spacing: 0.08em;
 }
 
+.gal-col {
+  animation: none;
+}
+
 h2,
 h3 {
   font-family: 'Cinzel', serif;
@@ -143,9 +146,8 @@ h3 {
 }
 
 #image-container img {
-  min-height: 80vh;
-  max-height: 80vh;
-  top: 12vh;
+  height: 900px;
+  top: 100px;
   position: absolute;
 }
 
@@ -156,13 +158,17 @@ h3 {
 /* IMAGE CAPTION */
 aside {
   font-size: 13px;
-  bottom: 3vh;
-  right: 3vw;
+  bottom: 4vh;
+  right: 4vw;
   position: absolute;
   font-style: italic;
   font-weight: lighter;
   /* color: rgb(60, 60, 60); */
   animation: fadeIn ease 4s;
+}
+
+aside p {
+  line-height: 0;
 }
 
 .one {
@@ -457,8 +463,14 @@ a:hover {
   }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-height: 1000px) {
   #image-container img {
-    min-height: auto;
+    height: 80vh;
+  }
+}
+
+@media screen and (max-height: 900px) {
+  #image-container img {
+    height: 75vh;
   }
 }
