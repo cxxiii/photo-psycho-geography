@@ -91,7 +91,6 @@ body {
 }
 
 #text-content {
-  max-width: 560px;
   margin: auto;
   text-align: justify;
 }
@@ -145,7 +144,7 @@ h3 {
 #image-container img {
   min-height: 80vh;
   max-height: 80vh;
-  top: 12.5vh;
+  top: 12vh;
   position: absolute;
 }
 
@@ -155,8 +154,8 @@ h3 {
 
 aside {
   font-size: 13px;
-  bottom: 2.5vh;
-  right: 2.5vw;
+  bottom: 2.4vh;
+  right: 2.4vw;
   position: absolute;
   font-style: italic;
   font-weight: lighter;
