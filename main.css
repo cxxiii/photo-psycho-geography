@@ -128,7 +128,7 @@ h1 {
 }
 
 .gal-col {
-  animation: none;
+  /* transition: color ease 4s; */
 }
 
 h2,

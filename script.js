@@ -168,6 +168,10 @@ function selectGallery(key) {
   SUB_HEADING.style.color = `var(--${DIRECTORIES[key].slice(0, 3)})`;
   PREV_IMG_BTN.style.color = `var(--${DIRECTORIES[key].slice(0, 3)})`;
   NEXT_IMG_BTN.style.color = `var(--${DIRECTORIES[key].slice(0, 3)})`;
+  setGalleryColorTxt('var(--default)');
+  // setTimeout(function () {
+  //   setGalleryColorTxt(`var(--${DIRECTORIES[key].slice(0, 3)})`);
+  // }, 4000);
   setGalleryColorTxt(`var(--${DIRECTORIES[key].slice(0, 3)})`);
   psychofy(DIRECTORIES[key]);
   currentImg = GALLERIES[key][0];
@@ -175,10 +179,11 @@ function selectGallery(key) {
 }
 
 function setGalleryColorTxt(str) {
+  // setTimeout(function () {
   for (i = 0; i < GALLERY_COLOR.length; i++) {
     GALLERY_COLOR[i].style.color = str;
-    GALLERY_COLOR[i].style.animation = 'none';
   }
+  // }, 4000);
 }
 
 function displayNavArrows() {
@@ -212,6 +217,8 @@ function displayNextImg() {
     PREV_IMG_BTN.classList.add('psy-text');
   }
   if (currentImg + 1 > GALLERIES[activeGallery].length) return;
+  // setGalleryColorTxt('var(--default)');
+  // setGalleryColorTxt(`var(--${DIRECTORIES[activeGallery].slice(0, 3)})`);
   currentImg++;
   PREV_IMG_BTN.style.opacity = 0.75;
   resetAnimation();
