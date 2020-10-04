@@ -148,9 +148,9 @@ h3 {
 }
 
 aside {
-  font-size: 0.8em;
-  bottom: 4vh;
-  right: 4vw;
+  font-size: 0.8125em;
+  bottom: 2vh;
+  right: 2vw;
   position: absolute;
   font-style: italic;
   font-weight: lighter;
