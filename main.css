@@ -459,3 +459,9 @@ a:hover {
   }
 }
 /* ANIMATIONS END */
+
+@media screen and (max-width: 1000px) {
+  #image-container img {
+    min-height: auto;
+  }
+}
