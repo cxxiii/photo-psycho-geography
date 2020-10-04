@@ -145,7 +145,7 @@ h3 {
 #image-container img {
   min-height: 80vh;
   max-height: 80vh;
-  top: 12vh;
+  top: 12.5vh;
   position: absolute;
 }
 
@@ -155,8 +155,8 @@ h3 {
 
 aside {
   font-size: 13px;
-  bottom: 2vh;
-  right: 2vw;
+  bottom: 2.5vh;
+  right: 2.5vw;
   position: absolute;
   font-style: italic;
   font-weight: lighter;
@@ -184,13 +184,13 @@ aside {
 }
 
 #arrow-right {
-  margin-right: 8vw;
+  margin-right: 4vw;
   opacity: 0.75;
   font-weight: 100;
   float: right;
 }
 #arrow-left {
-  margin-left: 8vw;
+  margin-left: 4vw;
   opacity: 0.25;
   font-weight: 100;
   float: left;
