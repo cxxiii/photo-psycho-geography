@@ -83,6 +83,7 @@ body {
   font-family: 'EB Garamond', serif;
   font-size: 1em;
   text-align: center;
+  display: flexbox;
 }
 
 /* ABOUT PAGE START */
@@ -137,14 +138,14 @@ h3 {
 
 /* IMAGE CONTAINER START */
 #image-container {
-  display: flex;
   justify-content: center;
   text-align: justify;
 }
 
 #image-container img {
-  max-height: 80vh;
+  /* max-height: 80vh; */
   top: 15vh;
+  height: 75vh;
   position: absolute;
 }
 
