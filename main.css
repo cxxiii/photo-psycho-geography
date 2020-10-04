@@ -139,7 +139,7 @@ h3 {
 
 #image-container img {
   max-height: 80vh;
-  top: 12vh;
+  top: 14vh;
   position: absolute;
 }
 
@@ -148,9 +148,9 @@ h3 {
 }
 
 aside {
-  font-size: 0.8125em;
-  bottom: 2vh;
-  right: 2vw;
+  font-size: 13px;
+  bottom: 30px;
+  right: 30px;
   position: absolute;
   font-style: italic;
   font-weight: lighter;
