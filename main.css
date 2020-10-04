@@ -176,21 +176,21 @@ aside {
 
 .nav-arrow {
   font-family: 'Cinzel', serif;
-  font-size: 4.5em;
-  margin-top: 36vh;
+  font-size: 4em;
+  margin-top: 40vh;
   cursor: pointer;
   line-height: 0;
   display: none;
 }
 
 #arrow-right {
-  margin-right: 9vw;
+  margin-right: 8vw;
   opacity: 0.75;
   font-weight: 100;
   float: right;
 }
 #arrow-left {
-  margin-left: 9vw;
+  margin-left: 8vw;
   opacity: 0.25;
   font-weight: 100;
   float: left;
