@@ -177,6 +177,7 @@ function selectGallery(key) {
 function setGalleryColorTxt(str) {
   for (i = 0; i < GALLERY_COLOR.length; i++) {
     GALLERY_COLOR[i].style.color = str;
+    GALLERY_COLOR[i].style.animation = 'none';
   }
 }
 
@@ -200,12 +201,15 @@ function psychofy(str) {
     SUB_HEADING.classList.remove('psy-text');
     SUB_HEADING_PSY.classList.remove('offset');
     NEXT_IMG_BTN.classList.remove('psy-text');
+    PREV_IMG_BTN.classList.remove('psy-text');
   }
 }
 
 function displayNextImg() {
   if (currentImg + 1 === GALLERIES[activeGallery].length) {
     NEXT_IMG_BTN.style.opacity = 0.25;
+    NEXT_IMG_BTN.classList.remove('psy-text');
+    PREV_IMG_BTN.classList.add('psy-text');
   }
   if (currentImg + 1 > GALLERIES[activeGallery].length) return;
   currentImg++;
@@ -218,6 +222,8 @@ function displayNextImg() {
 function displayPrevImg() {
   if (currentImg - 1 === 1) {
     PREV_IMG_BTN.style.opacity = 0.25;
+    PREV_IMG_BTN.classList.remove('psy-text');
+    NEXT_IMG_BTN.classList.add('psy-text');
   }
   if (currentImg - 1 === 0) return;
   currentImg--;
