@@ -103,7 +103,6 @@ ABOUT_PAGE.hidden = true;
 ABOUT.addEventListener('click', function () {
   SUB_HEADING.style.color = 'var(--default)';
   IMG_CONTAINER.style.setProperty('display', 'none');
-
   ABOUT_PAGE.hidden = false;
   activeGallery = undefined;
 });
@@ -141,7 +140,6 @@ function resetAnimation() {
 function navByArrowKeys(e) {
   if (activeGallery !== undefined) {
     if (e.code === 'ArrowRight') {
-      DISPLAY_IMG.style.animation = 'fadeOut ease 4s';
       displayNextImg();
     } else if (e.code === 'ArrowLeft') {
       displayPrevImg();
@@ -198,7 +196,6 @@ function psychofy(str) {
 function displayNextImg() {
   if (currentImg + 1 === GALLERIES[activeGallery].length) {
     NEXT_IMG_BTN.style.opacity = 0.25;
-    NEXT_IMG_BTN.classList.remove('offset');
   }
   if (currentImg + 1 > GALLERIES[activeGallery].length) return;
   currentImg++;
@@ -211,11 +208,9 @@ function displayNextImg() {
 function displayPrevImg() {
   if (currentImg - 1 === 1) {
     PREV_IMG_BTN.style.opacity = 0.25;
-    PREV_IMG_BTN.classList.remove('psy-arrow');
   }
   if (currentImg - 1 === 0) return;
   currentImg--;
-
   NEXT_IMG_BTN.style.opacity = 0.75;
   resetAnimation();
   resetCaptionTimer();
