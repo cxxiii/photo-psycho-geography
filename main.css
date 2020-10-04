@@ -149,6 +149,7 @@ h3 {
   height: 900px;
   top: 100px;
   position: absolute;
+  z-index: 1;
 }
 
 #display-img {
@@ -158,9 +159,10 @@ h3 {
 /* IMAGE CAPTION */
 aside {
   font-size: 13px;
-  bottom: 4vh;
-  right: 4vw;
+  bottom: 50px;
+  right: 100px;
   position: absolute;
+  z-index: 0;
   font-style: italic;
   font-weight: lighter;
   /* color: rgb(60, 60, 60); */
@@ -191,14 +193,14 @@ aside p {
 }
 
 #arrow-right {
-  margin-right: 4vw;
+  margin-right: 75px;
   opacity: 0.75;
   font-weight: 100;
   float: right;
 }
 
 #arrow-left {
-  margin-left: 4vw;
+  margin-left: 75px;
   opacity: 0.25;
   font-weight: 100;
   float: left;
