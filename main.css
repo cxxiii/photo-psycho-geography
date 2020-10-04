@@ -120,6 +120,7 @@ h1 {
 
 #pp {
   font-size: 24px;
+  font-weight: 700;
   letter-spacing: 0.08em;
 }
 
@@ -139,7 +140,7 @@ h3 {
 
 #image-container img {
   max-height: 80vh;
-  top: 14vh;
+  top: 15vh;
   position: absolute;
 }
 
