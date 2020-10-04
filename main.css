@@ -59,7 +59,8 @@ nav ul li a:hover {
 }
 
 header {
-  height: 88px;
+  height: auto;
+  z-index: 2;
 }
 
 header h1 {
@@ -109,8 +110,8 @@ h1 {
   font-family: 'Cinzel', serif;
   font-size: 2em;
   text-align: center;
-  margin-top: 1.5rem;
-  margin-bottom: 1rem;
+  margin-top: 2vh;
+  margin-bottom: 1vh;
 }
 
 #name {
@@ -138,8 +139,8 @@ h3 {
 
 #image-container img {
   max-height: 80vh;
+  top: 16vh;
   position: absolute;
-  bottom: 5.25vh;
 }
 
 #display-img {
@@ -147,9 +148,9 @@ h3 {
 }
 
 aside {
-  font-size: 13px;
-  bottom: 2.5vh;
-  right: 5vw;
+  font-size: 0.8em;
+  bottom: 4vh;
+  right: 8vw;
   position: absolute;
   font-style: italic;
   font-weight: lighter;
@@ -169,22 +170,21 @@ aside {
 
 .nav-arrow {
   font-family: 'Cinzel', serif;
-  font-size: 4.5em;
-  margin: auto;
-  margin-top: 18rem;
+  font-size: 4em;
+
+  margin-top: 32vh;
   cursor: pointer;
   line-height: 0;
-  filter: brightness(150%);
 }
 
 #arrow-right {
-  margin-right: 3rem;
+  margin-right: 16vw;
   opacity: 0.75;
   font-weight: 100;
   float: right;
 }
 #arrow-left {
-  margin-left: 3rem;
+  margin-left: 16vw;
   opacity: 0.25;
   font-weight: 100;
   float: left;
