@@ -170,21 +170,20 @@ aside {
 
 .nav-arrow {
   font-family: 'Cinzel', serif;
-  font-size: 4em;
-
-  margin-top: 32vh;
+  font-size: 6em;
+  margin-top: 36vh;
   cursor: pointer;
   line-height: 0;
 }
 
 #arrow-right {
-  margin-right: 16vw;
+  margin-right: 12vw;
   opacity: 0.75;
   font-weight: 100;
   float: right;
 }
 #arrow-left {
-  margin-left: 16vw;
+  margin-left: 12vw;
   opacity: 0.25;
   font-weight: 100;
   float: left;
