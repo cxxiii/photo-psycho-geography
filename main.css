@@ -18,7 +18,7 @@
 
 nav {
   margin-top: -1rem;
-  margin-left: 60px;
+  margin-left: 38.5px;
 }
 
 nav:after {
@@ -59,9 +59,7 @@ nav ul li a:hover {
 }
 
 header {
-  margin-top: 1.5rem;
-  height: 100%;
-  margin-bottom: 3rem;
+  height: 88px;
 }
 
 header h1 {
@@ -121,7 +119,7 @@ h1 {
 
 #pp {
   font-size: 24px;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.08em;
 }
 
 h2,
@@ -140,17 +138,17 @@ h3 {
 
 #image-container img {
   max-height: 80vh;
+  position: absolute;
 }
 
 #display-img {
   animation: fadeIn ease 2s;
-  position: absolute;
 }
 
 aside {
   font-size: 13px;
   bottom: 30px;
-  right: 30px;
+  right: 3rem;
   position: absolute;
   font-style: italic;
   font-weight: lighter;
@@ -186,7 +184,6 @@ aside {
 }
 #arrow-left {
   margin-left: 3rem;
-
   opacity: 0.25;
   font-weight: 100;
   float: left;
