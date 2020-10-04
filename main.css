@@ -93,6 +93,7 @@ body {
 #text-content {
   margin: auto;
   text-align: justify;
+  max-width: 40vw;
 }
 
 #text-content img {
@@ -154,8 +155,8 @@ h3 {
 
 aside {
   font-size: 13px;
-  bottom: 2.4vh;
-  right: 2.4vw;
+  bottom: 2vh;
+  right: 2vw;
   position: absolute;
   font-style: italic;
   font-weight: lighter;
