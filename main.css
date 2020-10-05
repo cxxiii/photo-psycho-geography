@@ -158,9 +158,9 @@ h3 {
 
 /* IMAGE CAPTION */
 aside {
-  font-size: 12.5px;
-  bottom: 25px;
-  right: 25px;
+  font-size: 13px;
+  bottom: 30px;
+  right: 30px;
   position: absolute;
   z-index: 0;
   font-style: italic;
@@ -185,24 +185,26 @@ aside p {
 
 .nav-arrow {
   font-family: 'Cinzel', serif;
-  font-size: 4em;
+  font-size: 60px;
+  /* font-weight: bolder; */
   margin-top: 40vh;
   cursor: pointer;
   line-height: 0;
   display: none;
+  filter: brightness(150%);
 }
 
 #arrow-right {
-  margin-right: 50px;
+  margin-right: 120px;
   opacity: 0.75;
-  font-weight: 100;
+
   float: right;
 }
 
 #arrow-left {
-  margin-left: 50px;
+  margin-left: 120px;
   opacity: 0.25;
-  font-weight: 100;
+
   float: left;
 }
 
