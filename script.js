@@ -65,6 +65,7 @@ const DIRECTORIES = {
 
 // GLOBAL VARIABLES
 let activeGallery;
+let prevGallery;
 let currentImg;
 
 // PAGE ELEMENTS
@@ -77,6 +78,9 @@ const FINLAND = document.querySelector('.finland');
 const FOREST = document.querySelector('.forest');
 const IRELAND = document.querySelector('.ireland');
 const PSYCHO = document.querySelector('.psycho');
+
+const GALLERY_NAMES = ['Botanical', 'Finland', 'Forest', 'Ireland', 'Psycho'];
+const GALLERY_MENU_LINKS = [BOTANICAL, FINLAND, FOREST, IRELAND, PSYCHO];
 
 const DISPLAY_IMG = document.querySelector('#image-container #display-img');
 const NAV_ARROWS = document.querySelectorAll('.nav-arrow');
@@ -123,6 +127,14 @@ document.addEventListener('keydown', navByArrowKeys);
 // FUNCTIONS
 
 function displayAboutPage() {
+  prevGallery = activeGallery;
+  if (prevGallery !== undefined) {
+    GALLERY_MENU_LINKS[prevGallery].innerText = GALLERY_NAMES[prevGallery];
+    GALLERY_MENU_LINKS[prevGallery].style.marginLeft = '';
+  }
+  ABOUT.innerText = '';
+  ABOUT.style.marginLeft = '-1em';
+  SUB_HEADING.innerText = 'About';
   SUB_HEADING.style.color = 'var(--default)';
   IMG_CONTAINER.style.setProperty('display', 'none');
   hideNavArrows();
@@ -163,7 +175,18 @@ function displayGallery() {
 }
 
 function selectGallery(key) {
+  ABOUT.innerText = 'About';
+  ABOUT.style.marginLeft = '';
+  prevGallery = activeGallery;
   activeGallery = key;
+  if (prevGallery !== undefined) {
+    GALLERY_MENU_LINKS[prevGallery].innerText = GALLERY_NAMES[prevGallery];
+    GALLERY_MENU_LINKS[prevGallery].style.marginLeft = '';
+  }
+  SUB_HEADING.innerText = GALLERY_MENU_LINKS[key].innerText;
+  GALLERY_MENU_LINKS[key].innerText = '';
+  GALLERY_MENU_LINKS[key].style.marginLeft = '-1em';
+  // GALLERY_MENU_LINKS[key].style.marginRight = '-2em';
   SUB_HEADING.style.color = `var(--${DIRECTORIES[key].slice(0, 3)})`;
   PREV_IMG_BTN.style.color = `var(--${DIRECTORIES[key].slice(0, 3)})`;
   NEXT_IMG_BTN.style.color = `var(--${DIRECTORIES[key].slice(0, 3)})`;
