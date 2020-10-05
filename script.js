@@ -226,10 +226,9 @@ function displayNextImg() {
   // setGalleryColorTxt(`var(--${DIRECTORIES[activeGallery].slice(0, 3)})`);
   currentImg++;
   PREV_IMG_BTN.style.opacity = 0.75;
-
+  resetAnimation(DISPLAY_IMG);
   resetCaptionTimer();
   DISPLAY_IMG.src = `/Galleries/${DIRECTORIES[activeGallery]}${currentImg}.jpg`;
-  resetAnimation(DISPLAY_IMG);
 }
 
 function displayPrevImg() {
