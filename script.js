@@ -69,8 +69,8 @@ let prevGallery;
 let currentImg;
 
 // PAGE ELEMENTS
-const HEADER = document.querySelector('header');
-const HEADING = document.querySelector('header h1');
+const HEADER = document.querySelector('#header');
+const HEADING = document.querySelector('#header h1');
 const SUB_HEADING = document.querySelector('#pp');
 const ABOUT = document.querySelector('#about');
 const BOTANICAL = document.querySelector('.botanical');
@@ -95,8 +95,6 @@ const ABOUT_PAGE = document.querySelector('#about-page');
 const GALLERY_COLOR = document.getElementsByClassName('gal-col');
 
 IMG_CAPTION.hidden = true;
-
-HEADER.hidden = false;
 
 // EVENT LISTENERS
 ABOUT.addEventListener('click', displayAboutPage);
@@ -125,7 +123,6 @@ PREV_IMG_BTN.addEventListener('click', displayPrevImg);
 document.addEventListener('keydown', navByArrowKeys);
 
 // FUNCTIONS
-
 function displayAboutPage() {
   prevGallery = activeGallery;
   if (prevGallery !== undefined) {
@@ -134,6 +131,7 @@ function displayAboutPage() {
   }
   ABOUT.innerText = '';
   ABOUT.style.marginLeft = '-1em';
+  resetAnimation(SUB_HEADING);
   SUB_HEADING.innerText = 'About';
   SUB_HEADING.style.color = 'var(--default)';
   IMG_CONTAINER.style.setProperty('display', 'none');
@@ -142,10 +140,10 @@ function displayAboutPage() {
   activeGallery = undefined;
 }
 
-function resetAnimation() {
-  DISPLAY_IMG.style.animation = 'none';
-  DISPLAY_IMG.offsetHeight; /* trigger reflow */
-  DISPLAY_IMG.style.animation = null;
+function resetAnimation(el) {
+  el.style.animation = 'none';
+  el.offsetHeight; /* trigger reflow */
+  el.style.animation = null;
 }
 
 function navByArrowKeys(e) {
@@ -183,6 +181,7 @@ function selectGallery(key) {
     GALLERY_MENU_LINKS[prevGallery].innerText = GALLERY_NAMES[prevGallery];
     GALLERY_MENU_LINKS[prevGallery].style.marginLeft = '';
   }
+  resetAnimation(SUB_HEADING);
   SUB_HEADING.innerText = GALLERY_MENU_LINKS[key].innerText;
   GALLERY_MENU_LINKS[key].innerText = '';
   GALLERY_MENU_LINKS[key].style.marginLeft = '-1em';
@@ -227,9 +226,10 @@ function displayNextImg() {
   // setGalleryColorTxt(`var(--${DIRECTORIES[activeGallery].slice(0, 3)})`);
   currentImg++;
   PREV_IMG_BTN.style.opacity = 0.75;
-  resetAnimation();
+
   resetCaptionTimer();
   DISPLAY_IMG.src = `/Galleries/${DIRECTORIES[activeGallery]}${currentImg}.jpg`;
+  resetAnimation(DISPLAY_IMG);
 }
 
 function displayPrevImg() {
@@ -239,7 +239,7 @@ function displayPrevImg() {
   if (currentImg - 1 === 0) return;
   currentImg--;
   NEXT_IMG_BTN.style.opacity = 0.75;
-  resetAnimation();
+  resetAnimation(DISPLAY_IMG);
   resetCaptionTimer();
   DISPLAY_IMG.src = `/Galleries/${DIRECTORIES[activeGallery]}${currentImg}.jpg`;
 }

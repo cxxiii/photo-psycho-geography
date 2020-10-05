@@ -10,54 +10,53 @@
 }
 
 /* HEADER START */
-header {
+
+#header {
+  margin-top: 50px;
   line-height: 0;
 }
 
-#heading {
-  margin-top: 50px;
-}
-
-header h1 {
+#header h1 {
   letter-spacing: 4px;
   font-weight: 200;
 }
-header h2 {
+
+#header h2 {
   font-family: 'Cinzel', serif;
   font-size: 1.25em;
   font-weight: 100;
   letter-spacing: 2px;
 }
 
-#navigation {
+#nav-menu {
   position: absolute;
   text-decoration: none;
-  left: -30px;
-  top: 0px;
+  left: -25px;
+  top: -5px;
 }
 
-nav ul li {
+#nav-menu ul li {
   display: inline;
-  position: relative;
   margin-right: 15px;
+  animation: fadeIn ease 4s;
 }
 
-nav ul li a {
+#nav-menu ul li a {
   font-size: 13px;
   font-weight: bold;
   text-decoration: none;
 }
 
-nav ul li a {
+#nav-menu ul li a {
   -moz-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   -webkit-transition: all 0.2s ease;
   -ms-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
-nav ul li a:hover {
+#nav-menu ul li a:hover {
   cursor: pointer;
-  color: whitesmoke;
+  /* color: whitesmoke; */
   font-weight: 100;
   text-shadow: 0 0 3px black;
   -moz-transition: all 0.5s ease;
@@ -85,13 +84,29 @@ body {
 }
 
 #text-content {
-  margin: auto;
   text-align: justify;
   max-width: 40vw;
+  max-height: 40vh;
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  margin: auto;
+  animation: fadeIn ease 2s;
 }
 
-#text-content img {
-  width: 100%;
+#about-img {
+  opacity: 0.33;
+  position: absolute;
+  top: 50px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: -10;
 }
 
 #text-content a {
@@ -120,6 +135,7 @@ h1 {
   font-size: 24px;
   font-weight: 700;
   letter-spacing: 0.08em;
+  animation: fadeIn ease 2s;
 }
 
 .gal-col {
@@ -226,6 +242,7 @@ aside p {
 
 a:hover {
   background: none;
+  color: var(--default);
 }
 
 [class*='botanical']:hover {

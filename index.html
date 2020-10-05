@@ -24,29 +24,30 @@
     <link type="text/css" rel="stylesheet" href="main.css" />
   </head>
   <body class="index">
-    <header>
-      <div id="navigation">
-        <nav>
-          <ul>
-            <li><a href="/">Home</a></li>
-            <li><a id="about">About</a></li>
-            <li><a class="botanical">Botanical</a></li>
-            <li><a class="finland">Finland</a></li>
-            <li><a class="forest">Forest</a></li>
-            <li><a class="ireland">Ireland</a></li>
-            <li>
-              <a class="psycho">Psycho</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-      <div id="heading">
-        <h1>
-          <span id="name">Katja Schmelzer</span> |
-          <span id="pp">Photo·psycho·geography</span>
-        </h1>
-      </div>
-    </header>
+    <div id="nav-menu">
+      <ul>
+        <li><a class="home" href="/">Home</a></li>
+        <li><a id="about">About</a></li>
+        <li class="one">|</li>
+        <li><a class="botanical two">Botanical</a></li>
+        <li><a class="finland two">Finland</a></li>
+        <li><a class="forest two">Forest</a></li>
+        <li><a class="ireland two">Ireland</a></li>
+        <li>
+          <a class="psycho three">Psycho</a>
+        </li>
+      </ul>
+    </div>
+
+    <div id="header">
+      <h1>
+        <span id="name">Katja Schmelzer</span> |
+        <span id="pp"
+          ><span class="one">Photo·</span><span class="two">psycho·</span
+          ><span class="three">geography</span></span
+        >
+      </h1>
+    </div>
 
     <!-- <div id="return-arrow" class="nav-arrow" title="View next image">›</div> -->
     <div id="arrow-left" class="nav-arrow" title="View previous image">‹</div>
@@ -64,16 +65,18 @@
     <div id="about-page">
       <p>&nbsp;</p>
       <div id="text-content">
-        <p>
+        <p class="one">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis,
           neque sequi similique nesciunt quidem deserunt quos deleniti omnis
           voluptatibus iste velit iusto, in nemo, exercitationem voluptatem
           rerum autem architecto minus.
         </p>
-        <p><img id="about-img" src="/Galleries/Biography.jpg" alt="" /></p>
 
-        <p>Contact: <a href="mailto:mail@address.com">mail@address.com</a></p>
+        <p class="two">
+          Contact: <a href="mailto:mail@address.com">mail@address.com</a>
+        </p>
       </div>
+      <img id="about-img" src="/Galleries/Biography.jpg" alt="" />
     </div>
 
     <script src="script.js"></script>
