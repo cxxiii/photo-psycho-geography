@@ -2,11 +2,22 @@
 
 :root {
   --default: whitesmoke;
-  --bot: #468138;
+  --bot: #006400;
   --fin: #002f6c;
-  --for: #228b22;
+  --for: #663300;
   --ire: #40c575;
   --psy: #fd209a;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
+#wrapper {
+  height: 100%;
+  min-height: 100%;
+  opacity: 1;
+  transition: opacity 0.5s;
 }
 
 /* HEADER START */
@@ -154,9 +165,7 @@ h1 {
   top: 100px;
   position: absolute;
   z-index: 1;
-}
-
-#display-img {
+  pointer-events: none;
 }
 
 /* IMAGE CAPTION */
