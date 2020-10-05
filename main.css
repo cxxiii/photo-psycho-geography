@@ -186,23 +186,21 @@ aside p {
 .nav-arrow {
   font-family: 'Cinzel', serif;
   font-size: 60px;
-  /* font-weight: bolder; */
   margin-top: 40vh;
   cursor: pointer;
   line-height: 0;
   display: none;
-  filter: brightness(150%);
 }
 
 #arrow-right {
-  margin-right: 120px;
+  margin-right: 60px;
   opacity: 0.75;
 
   float: right;
 }
 
 #arrow-left {
-  margin-left: 120px;
+  margin-left: 60px;
   opacity: 0.25;
 
   float: left;
