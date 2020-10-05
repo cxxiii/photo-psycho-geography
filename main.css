@@ -147,7 +147,7 @@ h3 {
 
 #image-container img {
   height: 900px;
-  top: 100px;
+  top: 105px;
   position: absolute;
   z-index: 1;
 }
@@ -195,14 +195,12 @@ aside p {
 #arrow-right {
   margin-right: 150px;
   opacity: 0.75;
-
   float: right;
 }
 
 #arrow-left {
   margin-left: 150px;
   opacity: 0.25;
-
   float: left;
 }
 
