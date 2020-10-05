@@ -151,7 +151,7 @@ function resetCaptionTimer() {
   IMG_CAPTION.hidden = true;
   setTimeout(function () {
     IMG_CAPTION.hidden = false;
-  }, 2000);
+  }, 3000);
 }
 
 function displayGallery() {
