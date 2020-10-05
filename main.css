@@ -141,7 +141,7 @@ h3 {
 /* IMAGE CONTAINER START */
 #image-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   text-align: justify;
 }
 
@@ -180,12 +180,12 @@ aside p {
   animation: fadeIn ease 8s;
 }
 .three {
-  animation: fadeIn ease 12s;
+  animation: fadeIn ease 10s;
 }
 
 .nav-arrow {
   font-family: 'Cinzel', serif;
-  font-size: 60px;
+  font-size: 4em;
   margin-top: 40vh;
   cursor: pointer;
   line-height: 0;
@@ -193,14 +193,14 @@ aside p {
 }
 
 #arrow-right {
-  margin-right: 60px;
+  margin-right: 120px;
   opacity: 0.75;
 
   float: right;
 }
 
 #arrow-left {
-  margin-left: 60px;
+  margin-left: 120px;
   opacity: 0.25;
 
   float: left;
