@@ -193,14 +193,14 @@ aside p {
 }
 
 #arrow-right {
-  margin-right: 75px;
+  margin-right: 50px;
   opacity: 0.75;
   font-weight: 100;
   float: right;
 }
 
 #arrow-left {
-  margin-left: 75px;
+  margin-left: 50px;
   opacity: 0.25;
   font-weight: 100;
   float: left;
