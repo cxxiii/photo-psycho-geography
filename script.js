@@ -71,7 +71,6 @@ let currentImg;
 const HEADER = document.querySelector('header');
 const HEADING = document.querySelector('header h1');
 const SUB_HEADING = document.querySelector('#pp');
-const SUB_HEADING_PSY = document.querySelector('#psycho');
 const ABOUT = document.querySelector('#about');
 const BOTANICAL = document.querySelector('.botanical');
 const FINLAND = document.querySelector('.finland');
@@ -173,7 +172,6 @@ function selectGallery(key) {
   //   setGalleryColorTxt(`var(--${DIRECTORIES[key].slice(0, 3)})`);
   // }, 4000);
   setGalleryColorTxt(`var(--${DIRECTORIES[key].slice(0, 3)})`);
-  psychofy(DIRECTORIES[key]);
   currentImg = GALLERIES[key][0];
   DISPLAY_IMG.src = `/Galleries/${DIRECTORIES[key]}${currentImg}.jpg`;
 }
@@ -197,24 +195,9 @@ function hideNavArrows() {
   }
 }
 
-function psychofy(str) {
-  if (str.includes('psy')) {
-    SUB_HEADING.classList.add('psy-text');
-    SUB_HEADING_PSY.classList.add('offset');
-    NEXT_IMG_BTN.classList.add('psy-text');
-  } else {
-    SUB_HEADING.classList.remove('psy-text');
-    SUB_HEADING_PSY.classList.remove('offset');
-    NEXT_IMG_BTN.classList.remove('psy-text');
-    PREV_IMG_BTN.classList.remove('psy-text');
-  }
-}
-
 function displayNextImg() {
   if (currentImg + 1 === GALLERIES[activeGallery].length) {
     NEXT_IMG_BTN.style.opacity = 0.25;
-    NEXT_IMG_BTN.classList.remove('psy-text');
-    PREV_IMG_BTN.classList.add('psy-text');
   }
   if (currentImg + 1 > GALLERIES[activeGallery].length) return;
   // setGalleryColorTxt('var(--default)');
@@ -229,8 +212,6 @@ function displayNextImg() {
 function displayPrevImg() {
   if (currentImg - 1 === 1) {
     PREV_IMG_BTN.style.opacity = 0.25;
-    PREV_IMG_BTN.classList.remove('psy-text');
-    NEXT_IMG_BTN.classList.add('psy-text');
   }
   if (currentImg - 1 === 0) return;
   currentImg--;
