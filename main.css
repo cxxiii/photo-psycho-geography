@@ -142,13 +142,6 @@ h1 {
   /* transition: color ease 4s; */
 }
 
-h2,
-h3 {
-  font-family: 'Cinzel', serif;
-  font-weight: 100;
-  letter-spacing: 2px;
-}
-
 /* IMAGE CONTAINER START */
 #image-container {
   display: flex;
@@ -164,7 +157,6 @@ h3 {
 }
 
 #display-img {
-  animation: fadeIn ease 1s;
 }
 
 /* IMAGE CAPTION */
