@@ -98,13 +98,11 @@ body {
   text-align: justify;
   max-width: 40vw;
   max-height: 40vh;
-
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-
   margin: auto;
   animation: fadeIn ease 2s;
 }
