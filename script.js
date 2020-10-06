@@ -250,4 +250,5 @@ function displayRandomImg() {
   DISPLAY_IMG.src = `/Galleries/${DIRECTORIES[randomGallery]}${imgVar}.jpg`;
 }
 
+// ON LOAD
 displayRandomImg();
