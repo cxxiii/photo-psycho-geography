@@ -48,9 +48,15 @@ h1 {
 
 #pp {
   font-size: 24px;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: 0.08em;
   animation: fadeIn ease 2s;
+}
+
+#pp,
+.nav-arrow,
+#nav-menu ul li a:hover {
+  filter: saturate(0.5);
 }
 
 .gal-col {
@@ -67,13 +73,6 @@ h1 {
 #header h1 {
   letter-spacing: 4px;
   font-weight: 200;
-}
-
-#header h2 {
-  font-family: 'Cinzel', serif;
-  font-size: 1.25em;
-  font-weight: 100;
-  letter-spacing: 2px;
 }
 
 /* NAVIGATION MENU */
