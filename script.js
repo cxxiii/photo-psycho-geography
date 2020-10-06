@@ -244,7 +244,7 @@ function displayPrevImg() {
 }
 
 function displayRandomImg() {
-  let randomGallery = Math.floor(Math.random() * 4);
+  let randomGallery = Math.floor(Math.random() * 5);
   let imgVar = Math.floor(Math.random() * GALLERIES[randomGallery].length) + 1;
   DISPLAY_IMG.style.animation = 'none';
   DISPLAY_IMG.src = `/Galleries/${DIRECTORIES[randomGallery]}${imgVar}.jpg`;
