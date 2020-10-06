@@ -42,6 +42,11 @@ h1 {
   margin-bottom: 1vh;
 }
 
+hr {
+  width: 5%;
+  opacity: 0.67;
+}
+
 #name {
   letter-spacing: -0.04em;
 }
@@ -121,11 +126,12 @@ h1 {
 }
 
 #text-content {
+  font-size: 13px;
   text-align: justify;
   max-width: 40vw;
-  max-height: 40vh;
+  max-height: 80vh;
   position: absolute;
-  top: 0;
+  top: 20px;
   bottom: 0;
   left: 0;
   right: 0;
@@ -136,7 +142,7 @@ h1 {
 #about-img {
   opacity: 0.33;
   position: absolute;
-  top: 200px;
+  top: 85px;
   bottom: 0;
   left: 0;
   right: 0;
@@ -366,10 +372,13 @@ a:hover {
   #image-container img {
     height: 80vh;
   }
+  #about-img {
+    top: 215px;
+  }
 }
 
 @media screen and (max-height: 900px) {
-  #image-container img {
-    height: 75vh;
+  #about-img {
+    top: 325px;
   }
 }
