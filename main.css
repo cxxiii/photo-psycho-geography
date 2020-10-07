@@ -369,13 +369,14 @@ a:hover {
 }
 
 /* Adjustments for different screen heights */
+
 @media screen and (max-height: 1000px) {
   #image-container img {
     height: 80vh;
   }
 }
 
-@media screen and (max-height: 970px) {
+@media screen and (max-height: 940px) {
   #text-content {
     top: 100px;
     margin-inline-start: 100px;
