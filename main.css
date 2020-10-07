@@ -378,22 +378,21 @@ a:hover {
 
 @media screen and (max-height: 971px) {
   #text-content {
-    margin-inline-start: 100px;
     width: 700px;
   }
   #about-img {
     top: 125px;
-    width: 42.5%;
+    width: 45%;
   }
 }
 
 @media screen and (max-height: 969px) {
   #text-content {
-    width: 800px;
+    width: 700px;
   }
   #about-img {
-    top: 100px;
-    width: 40%;
+    top: 125px;
+    width: 50%;
   }
 }
 
