@@ -374,9 +374,12 @@ a:hover {
   #image-container img {
     height: 80vh;
   }
+  #text-content {
+    width: 700px;
+  }
 }
 
-@media screen and (max-height: 939px) {
+@media screen and (max-height: 900px) {
   #text-content {
     top: 100px;
     margin-inline-start: 100px;
@@ -388,7 +391,7 @@ a:hover {
   }
 }
 
-@media screen and (max-height: 800px) {
+@media screen and (max-height: 850px) {
   #text-content {
     top: 50px;
     margin-inline-start: 50px;
