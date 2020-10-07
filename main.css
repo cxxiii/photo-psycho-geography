@@ -128,27 +128,25 @@ hr {
 #text-content {
   font-size: 13px;
   text-align: justify;
-  max-width: 40vw;
-  max-height: 80vh;
-  position: absolute;
-  top: 20px;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
+  position: fixed;
+  width: 800px;
+  top: 200px;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 100px;
+  margin-inline-end: 0px;
   animation: fadeIn ease 2s;
 }
 
 #about-img {
-  opacity: 0.33;
-  position: absolute;
-  top: 85px;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  z-index: -10;
+  position: fixed;
+  top: 150px;
+  right: 100px;
+  left: auto;
   pointer-events: none;
+  width: 45%;
+  margin-top: 0;
+  animation: fadeIn ease 16s;
 }
 
 #text-content a {
@@ -373,13 +371,27 @@ a:hover {
   #image-container img {
     height: 80vh;
   }
+  #text-content {
+    top: 100px;
+    margin-inline-start: 100px;
+    width: 700px;
+  }
   #about-img {
-    top: 215px;
+    top: 125px;
+
+    width: 42.5%;
   }
 }
 
 @media screen and (max-height: 900px) {
+  #text-content {
+    top: 50px;
+    margin-inline-start: 50px;
+    width: 700px;
+  }
   #about-img {
-    top: 325px;
+    top: 150px;
+    width: 37.5%;
+    right: 75px;
   }
 }
