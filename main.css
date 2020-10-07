@@ -375,6 +375,19 @@ a:hover {
   }
 }
 
+@media screen and (max-height: 950px) {
+  #text-content {
+    top: 100px;
+    margin-inline-start: 100px;
+    width: 700px;
+  }
+  #about-img {
+    top: 125px;
+
+    width: 42.5%;
+  }
+}
+
 @media screen and (max-height: 900px) {
   #text-content {
     top: 50px;
