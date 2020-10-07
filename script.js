@@ -164,22 +164,27 @@ ABOUT.addEventListener('click', displayAboutPage);
 BOTANICAL.addEventListener('click', function () {
   selectGallery(0);
   displayGallery();
+  SUB_HEADING.style.setProperty('filter', 'brightness(100%)');
 });
 FINLAND.addEventListener('click', function () {
   selectGallery(1);
   displayGallery();
+  SUB_HEADING.style.setProperty('filter', 'brightness(125%)');
 });
 FOREST.addEventListener('click', function () {
   selectGallery(2);
   displayGallery();
+  SUB_HEADING.style.setProperty('filter', 'brightness(100%)');
 });
 IRELAND.addEventListener('click', function () {
   selectGallery(3);
   displayGallery();
+  SUB_HEADING.style.setProperty('filter', 'brightness(100%)');
 });
 PSYCHO.addEventListener('click', function () {
   selectGallery(4);
   displayGallery();
+  SUB_HEADING.style.setProperty('filter', 'brightness(100%)');
 });
 NEXT_IMG_BTN.addEventListener('click', displayNextImg);
 PREV_IMG_BTN.addEventListener('click', displayPrevImg);
