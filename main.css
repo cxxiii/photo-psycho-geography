@@ -141,7 +141,8 @@ hr {
 #about-img {
   position: fixed;
   float: right;
-  top: 100px;
+  /* top: 100px; */
+  top: 150px;
   right: 100px;
   left: auto;
   pointer-events: none;
@@ -180,9 +181,6 @@ aside {
   font-weight: lighter;
   /* color: rgb(60, 60, 60); */
   animation: fadeIn ease 4s;
-}
-
-aside p {
   line-height: 0;
 }
 
@@ -376,9 +374,6 @@ a:hover {
 }
 
 @media screen and (max-height: 971px) {
-  #text-content {
-    width: 700px;
-  }
   #about-img {
     top: 100px;
     width: 45%;
@@ -386,9 +381,6 @@ a:hover {
 }
 
 @media screen and (max-height: 969px) {
-  #text-content {
-    width: 700px;
-  }
   #about-img {
     top: 100px;
     width: 46%;
@@ -399,7 +391,6 @@ a:hover {
   #text-content {
     top: 50px;
     margin-inline-start: 50px;
-    width: 700px;
   }
   #about-img {
     top: 150px;
