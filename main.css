@@ -123,15 +123,13 @@ hr {
 /* ABOUT PAGE */
 #about-page {
   display: none;
-  width: 50%;
-  height: 50%;
 }
 
 #text-content {
   font-size: 13px;
   text-align: justify;
   position: fixed;
-  width: 800px;
+  width: 700px;
   top: 100px;
   margin-block-start: 1em;
   margin-block-end: 1em;
@@ -147,7 +145,7 @@ hr {
   right: 100px;
   left: auto;
   pointer-events: none;
-  width: 45%;
+  width: 50%;
   margin-top: 0;
   animation: fadeIn ease 16s;
 }
@@ -377,23 +375,13 @@ a:hover {
   }
 }
 
-@media screen and (max-height: 971px) {
-  #text-content {
-    width: 700px;
-  }
-  #about-img {
-    top: 125px;
-    width: 45%;
-  }
-}
-
 @media screen and (max-height: 969px) {
   #text-content {
     width: 700px;
   }
   #about-img {
     top: 100px;
-    width: 45%;
+    width: 46%;
   }
 }
 
