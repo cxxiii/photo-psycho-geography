@@ -139,7 +139,7 @@ hr {
 }
 
 #about-img {
-  position: absolute;
+  position: fixed;
   float: right;
   top: 100px;
   right: 100px;
@@ -372,6 +372,16 @@ a:hover {
 @media screen and (max-height: 1000px) {
   #image-container img {
     height: 80vh;
+  }
+}
+
+@media screen and (max-height: 971px) {
+  #text-content {
+    width: 700px;
+  }
+  #about-img {
+    top: 100px;
+    width: 45%;
   }
 }
 
