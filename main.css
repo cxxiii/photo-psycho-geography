@@ -376,7 +376,7 @@ a:hover {
   }
 }
 
-@media screen and (max-height: 940px) {
+@media screen and (max-height: 939px) {
   #text-content {
     top: 100px;
     margin-inline-start: 100px;
