@@ -141,7 +141,8 @@ hr {
 }
 
 #about-img {
-  position: fixed;
+  position: absolute;
+  float: right;
   top: 100px;
   right: 100px;
   left: auto;
@@ -392,7 +393,7 @@ a:hover {
   }
   #about-img {
     top: 100px;
-    width: 50%;
+    width: 45%;
   }
 }
 
