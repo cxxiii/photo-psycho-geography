@@ -148,6 +148,7 @@ hr {
   right: 0;
   margin: auto;
   z-index: -10;
+  pointer-events: none;
 }
 
 #text-content a {
