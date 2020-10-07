@@ -374,9 +374,6 @@ a:hover {
   #image-container img {
     height: 80vh;
   }
-  #text-content {
-    width: 700px;
-  }
 }
 
 @media screen and (max-height: 900px) {
