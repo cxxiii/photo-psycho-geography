@@ -40,16 +40,17 @@ h1 {
   font-size: 2em;
 }
 
-hr {
-  width: 5%;
-  opacity: 0.67;
-}
-
 #name {
+  position: absolute;
+  top: 0;
+  right: 290px;
+  bottom: 0;
+  left: 0;
   letter-spacing: -0.04em;
 }
 
 #pp {
+  position: absolute;
   font-size: 24px;
   font-weight: 400;
   letter-spacing: 0.08em;
@@ -60,10 +61,6 @@ hr {
 .nav-arrow,
 #nav-menu ul li a:hover {
   filter: saturate(0.5);
-}
-
-.gal-col {
-  /* transition: color ease 4s; */
 }
 
 /* HEADER */
@@ -109,7 +106,6 @@ hr {
 
 #nav-menu ul li a:hover {
   cursor: pointer;
-  /* color: whitesmoke; */
   font-weight: 100;
   text-shadow: 0 0 3px black;
   -moz-transition: all 0.5s ease;
@@ -123,7 +119,7 @@ hr {
 #about-page {
   display: none;
   justify-content: space-between;
-  margin: 50px;
+  padding: 50px;
 }
 
 #text-content {
@@ -202,14 +198,6 @@ aside {
   opacity: 0.25;
   float: left;
 }
-
-/* #return-arrow {
-  transform: rotate(-90deg);
-  margin-top: 2.5rem;
-  margin-bottom: 5rem;
-  opacity: 0.75;
-  line-height: 0;
-} */
 
 /* TRANSITIONS & ANIMATIONS */
 .fade-in {
