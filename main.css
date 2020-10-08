@@ -38,9 +38,6 @@ li {
 h1 {
   font-family: 'Cinzel', serif;
   font-size: 2em;
-  text-align: center;
-  margin-top: 2vh;
-  margin-bottom: 1vh;
 }
 
 hr {
@@ -79,6 +76,7 @@ hr {
 #header h1 {
   letter-spacing: 4px;
   font-weight: 200;
+  position: sticky;
 }
 
 /* NAVIGATION MENU */
