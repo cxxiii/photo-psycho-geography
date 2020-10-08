@@ -151,14 +151,12 @@ hr {
 #image-container {
   display: flex;
   justify-content: space-evenly;
-  text-align: justify;
 }
 
 #image-container img {
   height: 900px;
   top: 100px;
   position: absolute;
-  z-index: 1;
   pointer-events: none;
 }
 
