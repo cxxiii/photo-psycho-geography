@@ -76,7 +76,7 @@ h1 {
   font-size: 24px;
   font-weight: 400;
   letter-spacing: 0.08em;
-  transition: all ease-out 0.8s;
+  transition: color ease-out 0.8s;
 }
 
 /* .finland {
@@ -124,7 +124,7 @@ h1 {
 
 #nav-menu ul li a:hover {
   cursor: pointer;
-  font-weight: 100;
+
   /* text-shadow: 0 0 3px black; */
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
@@ -402,7 +402,7 @@ aside {
     align-self: flex-end;
   }
   #nav-menu ul li a {
-    font-size: 12px;
+    font-size: 10px;
     font-weight: bold;
     text-decoration: none;
   }
@@ -427,7 +427,7 @@ aside {
     animation: fadeIn ease 16s;
   }
   #nav-menu ul li {
-    margin-right: 10px;
+    margin-right: auto;
   }
 }
 
