@@ -360,7 +360,7 @@ a:hover {
     letter-spacing: -2px;
   }
   #name {
-    font-size: 20px;
+    font-size: 18px;
     position: relative;
     top: auto;
     right: auto;
@@ -370,7 +370,7 @@ a:hover {
   }
   #pp {
     position: relative;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 400;
     letter-spacing: 0.08em;
     animation: fadeIn ease 2s;
@@ -401,8 +401,6 @@ a:hover {
     text-decoration: none;
   }
   #about-page {
-    align-items: unset;
-    justify-content: unset;
     padding: 25px;
   }
   #text-content {
@@ -413,10 +411,17 @@ a:hover {
     margin-right: auto;
   }
   #about-img {
+    top: auto;
+    left: auto;
+    right: auto;
+    position: static;
     pointer-events: none;
     width: 100%;
     height: auto;
     animation: fadeIn ease 16s;
+  }
+  #nav-menu ul li {
+    margin-right: 10px;
   }
 }
 
