@@ -76,7 +76,7 @@ h1 {
   font-size: 24px;
   font-weight: 400;
   letter-spacing: 0.08em;
-  transition: color ease 1s;
+  transition: all ease 1s;
 }
 
 /* .finland {
@@ -103,7 +103,7 @@ h1 {
 
 #nav-menu ul li {
   display: inline;
-  margin-right: 15px;
+  margin-left: 15px;
   animation: fadeIn ease 4s;
 }
 
@@ -111,6 +111,7 @@ h1 {
   font-size: 13px;
   font-weight: bold;
   text-decoration: none;
+  transition: all ease 10s;
 }
 
 #nav-menu ul li a {
