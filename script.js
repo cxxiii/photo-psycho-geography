@@ -204,7 +204,7 @@ function displayAboutPage() {
   SUB_HEADING.style.color = 'var(--default)';
   IMG_CONTAINER.style.setProperty('display', 'none');
   hideNavArrows();
-  ABOUT_PAGE.style.setProperty('display', 'flex');
+  ABOUT_PAGE.style.setProperty('display', 'block');
   activeGallery = undefined;
 }
 

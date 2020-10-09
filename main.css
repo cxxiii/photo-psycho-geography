@@ -16,7 +16,6 @@ html {
 body {
   color: whitesmoke;
   background: black;
-  margin: 0 auto;
   font-family: 'EB Garamond', serif;
   font-size: 1em;
   text-align: center;
@@ -118,7 +117,6 @@ h1 {
 /* ABOUT PAGE */
 #about-page {
   display: none;
-  justify-content: space-between;
   padding: 50px;
 }
 
@@ -127,13 +125,15 @@ h1 {
   text-align: justify;
   width: 50%;
   animation: fadeIn ease 2s;
-  margin-right: 50px;
 }
 
 #about-img {
+  top: 150px;
+  left: auto;
+  right: 100px;
+  position: absolute;
   pointer-events: none;
-  width: 50%;
-  height: 50%;
+  width: 40%;
   animation: fadeIn ease 16s;
 }
 
@@ -401,7 +401,6 @@ a:hover {
     text-decoration: none;
   }
   #about-page {
-    display: block;
     align-items: unset;
     justify-content: unset;
     padding: 25px;
