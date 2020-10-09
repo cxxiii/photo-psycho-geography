@@ -131,6 +131,7 @@ h1 {
   font-size: 13px;
   text-align: justify;
   width: 50%;
+  left: 100px;
   animation: fadeIn ease 2s;
 }
 
