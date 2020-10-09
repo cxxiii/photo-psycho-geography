@@ -66,26 +66,16 @@ h1 {
   position: absolute;
   right: 288px;
   left: 0;
-  /* transform: translateX(571px); */
   letter-spacing: -0.04em;
 }
 
 #subheading {
   position: absolute;
-  /* transform: translateX(850px); */
   font-size: 24px;
   font-weight: 400;
   letter-spacing: 0.08em;
-  transition: color ease-out 0.8s;
+  transition: color ease 0.8s;
 }
-
-/* .finland {
-  position: relative;
-  top: -25px;
-  left: 100px;
-  bottom: 0;
-  right: 0;
-} */
 
 /* NAVIGATION MENU */
 #nav-menu {
@@ -95,9 +85,7 @@ h1 {
   left: 0;
   bottom: 0;
   right: 0;
-  /* left: -25px;
-  top: -5px; */
-  /* left: 130px; */
+
   line-height: 0;
 }
 
@@ -180,7 +168,7 @@ h1 {
   cursor: pointer;
   line-height: 0;
   display: none;
-  margin: 100px;
+  margin: 75px;
   transition: color ease-out 0.8s;
 }
 
