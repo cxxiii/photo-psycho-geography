@@ -76,8 +76,7 @@ h1 {
   font-size: 24px;
   font-weight: 400;
   letter-spacing: 0.08em;
-  /* animation: fadeIn ease 2s; */
-  transition: color ease 2s;
+  transition: color ease 1s;
 }
 
 /* .finland {
@@ -136,7 +135,7 @@ h1 {
 /* ABOUT PAGE */
 #about-page {
   display: none;
-  padding: 50px;
+  padding: 80px;
 }
 
 #text-content {
@@ -358,7 +357,7 @@ aside {
 /* Adjustments for lower screen heights and mobile*/
 @media screen and (max-height: 1000px) {
   #image-container img {
-    height: 80vh;
+    height: 81.75vh;
   }
 }
 
