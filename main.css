@@ -128,7 +128,7 @@ h1 {
 }
 
 #about-img {
-  top: 150px;
+  top: 125px;
   left: auto;
   right: 100px;
   position: absolute;
@@ -145,8 +145,7 @@ h1 {
 #image-container {
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  /* margin: 50px; */
+  justify-content: space-evenly;
 }
 
 #image-container img {
@@ -429,7 +428,6 @@ a:hover {
   #image-container img {
     height: 250px;
     width: auto;
-    max-width: none;
     margin-top: 20px;
     margin-left: 40px;
     margin-right: 40px;
