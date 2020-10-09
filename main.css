@@ -26,7 +26,7 @@ body {
   height: 100%;
   min-height: 100%;
   opacity: 1;
-  transition: opacity 0.5s;
+  transition: all ease 0.5s;
 }
 
 a,
@@ -76,7 +76,7 @@ h1 {
   font-size: 24px;
   font-weight: 400;
   letter-spacing: 0.08em;
-  transition: all ease 1s;
+  transition: all ease-out 0.8s;
 }
 
 /* .finland {
@@ -174,13 +174,14 @@ h1 {
 }
 
 .nav-arrow {
+  position: absolute;
   font-family: 'Cinzel', serif;
   font-size: 4em;
   cursor: pointer;
   line-height: 0;
   display: none;
-  position: absolute;
   margin: 100px;
+  transition: color ease-out 0.8s;
 }
 
 #arrow-right {
@@ -197,11 +198,9 @@ h1 {
 
 aside {
   font-size: 13px;
-  /* bottom: 30px; */
-  /* position: absolute; */
   font-style: italic;
   font-weight: lighter;
-  animation: fadeIn ease 4s;
+  animation: fadeIn ease-out 4s;
   bottom: auto;
   right: auto;
   position: absolute;
