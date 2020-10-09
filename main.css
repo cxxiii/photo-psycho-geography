@@ -14,7 +14,7 @@ html {
 }
 
 body {
-  color: whitesmoke;
+  color: var(--default);
   background: black;
   font-family: 'EB Garamond', serif;
   font-size: 1em;
@@ -34,6 +34,29 @@ li {
   color: rgb(60, 60, 60);
 }
 
+a:hover {
+  background: none;
+  color: var(--default);
+}
+
+#subheading,
+.nav-arrow,
+#nav-menu ul li a:hover {
+  filter: saturate(0.5);
+}
+
+/* HEADER */
+#header {
+  line-height: 0;
+  margin-top: 40px;
+}
+
+#header h1 {
+  letter-spacing: 4px;
+  font-weight: 400;
+  position: sticky;
+}
+
 h1 {
   font-family: 'Cinzel', serif;
   font-size: 2em;
@@ -41,46 +64,42 @@ h1 {
 
 #name {
   position: absolute;
-  top: 0;
-  right: 290px;
-  bottom: 0;
+  right: 288px;
   left: 0;
+  /* transform: translateX(571px); */
   letter-spacing: -0.04em;
 }
 
-#pp {
+#subheading {
   position: absolute;
+  /* transform: translateX(850px); */
   font-size: 24px;
   font-weight: 400;
   letter-spacing: 0.08em;
-  animation: fadeIn ease 2s;
+  /* animation: fadeIn ease 2s; */
+  transition: color ease 2s;
 }
 
-#pp,
-.nav-arrow,
-#nav-menu ul li a:hover {
-  filter: saturate(0.5);
-}
-
-/* HEADER */
-
-#header {
-  margin-top: 55px;
-  line-height: 0;
-}
-
-#header h1 {
-  letter-spacing: 4px;
-  font-weight: 200;
-  position: sticky;
-}
+/* .finland {
+  position: relative;
+  top: -25px;
+  left: 100px;
+  bottom: 0;
+  right: 0;
+} */
 
 /* NAVIGATION MENU */
 #nav-menu {
   position: absolute;
   text-decoration: none;
-  left: -25px;
-  top: -5px;
+  top: 50px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  /* left: -25px;
+  top: -5px; */
+  /* left: 130px; */
+  line-height: 0;
 }
 
 #nav-menu ul li {
@@ -106,7 +125,7 @@ h1 {
 #nav-menu ul li a:hover {
   cursor: pointer;
   font-weight: 100;
-  text-shadow: 0 0 3px black;
+  /* text-shadow: 0 0 3px black; */
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   -webkit-transition: all 0.5s ease;
@@ -149,34 +168,9 @@ h1 {
 }
 
 #image-container img {
-  /* height: 100vh; */
-  height: 900px;
-  /* top: 100px; */
+  height: 85vh;
   margin: 50px;
-  /* position: absolute; */
   pointer-events: none;
-}
-
-/* IMAGE CAPTION */
-aside {
-  font-size: 13px;
-  bottom: 30px;
-  right: 45px;
-  position: absolute;
-  font-style: italic;
-  font-weight: lighter;
-  animation: fadeIn ease 4s;
-  line-height: 0;
-}
-
-.one {
-  animation: fadeIn ease 6s;
-}
-.two {
-  animation: fadeIn ease 8s;
-}
-.three {
-  animation: fadeIn ease 10s;
 }
 
 .nav-arrow {
@@ -192,19 +186,39 @@ aside {
 #arrow-right {
   right: 0;
   left: auto;
-  /* margin-right: 100px; */
   opacity: 0.75;
 }
 
 #arrow-left {
   left: 0;
   right: auto;
-  /* margin-left: 100px; */
   opacity: 0.25;
-  /* float: left; */
 }
 
-/* TRANSITIONS & ANIMATIONS */
+aside {
+  font-size: 13px;
+  /* bottom: 30px; */
+  /* position: absolute; */
+  font-style: italic;
+  font-weight: lighter;
+  animation: fadeIn ease 4s;
+  bottom: auto;
+  right: auto;
+  position: absolute;
+  align-self: flex-end;
+}
+
+/* ANIMATIONS */
+.one {
+  animation: fadeIn ease 6s;
+}
+.two {
+  animation: fadeIn ease 8s;
+}
+.three {
+  animation: fadeIn ease 10s;
+}
+
 .fade-in {
   animation: fadeIn ease 3s;
   -webkit-animation: fadeIn ease 10s;
@@ -219,11 +233,6 @@ aside {
   -moz-animation: fadeOut ease 8s;
   -o-animation: fadeOut ease 8s;
   -ms-animation: fadeOut ease 8s;
-}
-
-a:hover {
-  background: none;
-  color: var(--default);
 }
 
 [class*='botanical']:hover {
@@ -346,8 +355,7 @@ a:hover {
   }
 }
 
-/* Adjustments for different screen heights */
-
+/* Adjustments for lower screen heights and mobile*/
 @media screen and (max-height: 1000px) {
   #image-container img {
     height: 80vh;
@@ -367,7 +375,7 @@ a:hover {
     left: auto;
     letter-spacing: -0.04em;
   }
-  #pp {
+  #subheading {
     position: relative;
     font-size: 12px;
     font-weight: 400;

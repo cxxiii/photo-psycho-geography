@@ -133,7 +133,7 @@ let currentImg;
 // PAGE ELEMENTS
 const HEADER = document.querySelector('#header');
 const HEADING = document.querySelector('#header h1');
-const SUB_HEADING = document.querySelector('#pp');
+const SUB_HEADING = document.querySelector('#subheading');
 const ABOUT = document.querySelector('#about');
 const BOTANICAL = document.querySelector('.botanical');
 const FINLAND = document.querySelector('.finland');
@@ -144,18 +144,16 @@ const PSYCHO = document.querySelector('.psycho');
 const GALLERY_NAMES = ['Botanical', 'Finland', 'Forest', 'Ireland', 'Psycho'];
 const GALLERY_MENU_LINKS = [BOTANICAL, FINLAND, FOREST, IRELAND, PSYCHO];
 
-const DISPLAY_IMG = document.querySelector('#image-container #display-img');
 const NAV_ARROWS = document.querySelectorAll('.nav-arrow');
 const PREV_IMG_BTN = document.querySelector('#arrow-left');
 const NEXT_IMG_BTN = document.querySelector('#arrow-right');
-const RETURN_BTN = document.querySelector('#return-arrow');
 
 const IMG_CONTAINER = document.querySelector('#image-container');
+const DISPLAY_IMG = document.querySelector('#image-container #display-img');
 const IMG_CAPTION = document.querySelector('aside');
+
 const ABOUT_PAGE = document.querySelector('#about-page');
 const ABOUT_IMG = document.querySelector('#about-img');
-
-const GALLERY_COLOR = document.getElementsByClassName('gal-col');
 
 IMG_CAPTION.hidden = true;
 
@@ -190,7 +188,15 @@ NEXT_IMG_BTN.addEventListener('click', displayNextImg);
 PREV_IMG_BTN.addEventListener('click', displayPrevImg);
 document.addEventListener('keydown', navByArrowKeys);
 
-// FUNCTIONS
+// MAIN FUNCTIONS
+function displayRandomImg() {
+  const randomGallery = Math.floor(Math.random() * 5);
+  const imgVar =
+    Math.floor(Math.random() * GALLERIES[randomGallery].length) + 1;
+  DISPLAY_IMG.style.animation = 'none';
+  DISPLAY_IMG.src = `/Galleries/${DIRECTORIES[randomGallery]}${imgVar}.jpg`;
+}
+
 function displayAboutPage() {
   prevGallery = activeGallery;
   if (prevGallery !== undefined) {
@@ -208,38 +214,6 @@ function displayAboutPage() {
   activeGallery = undefined;
 }
 
-function resetAnimation(el) {
-  el.style.animation = 'none';
-  el.offsetHeight; /* trigger reflow */
-  el.style.animation = null;
-}
-
-function navByArrowKeys(e) {
-  if (activeGallery !== undefined) {
-    if (e.code === 'ArrowRight') {
-      displayNextImg();
-    } else if (e.code === 'ArrowLeft') {
-      displayPrevImg();
-    } else return;
-  } else return;
-}
-
-function resetCaptionTimer() {
-  IMG_CAPTION.hidden = true;
-  setTimeout(function () {
-    IMG_CAPTION.hidden = false;
-  }, 2000);
-}
-
-function displayGallery() {
-  ABOUT_PAGE.style.setProperty('display', 'none');
-  IMG_CONTAINER.style.setProperty('display', 'flex');
-  displayNavArrows();
-  resetCaptionTimer();
-  NEXT_IMG_BTN.style.opacity = 0.75;
-  PREV_IMG_BTN.style.opacity = 0.25;
-}
-
 function selectGallery(key) {
   ABOUT.innerText = 'About';
   ABOUT.style.marginLeft = '';
@@ -253,36 +227,20 @@ function selectGallery(key) {
   SUB_HEADING.innerText = GALLERY_MENU_LINKS[key].innerText;
   GALLERY_MENU_LINKS[key].innerText = '';
   GALLERY_MENU_LINKS[key].style.marginLeft = '-1em';
-  // GALLERY_MENU_LINKS[key].style.marginRight = '-2em';
   SUB_HEADING.style.color = `var(--${DIRECTORIES[key].slice(0, 3)})`;
   PREV_IMG_BTN.style.color = `var(--${DIRECTORIES[key].slice(0, 3)})`;
   NEXT_IMG_BTN.style.color = `var(--${DIRECTORIES[key].slice(0, 3)})`;
-  setGalleryColorTxt('var(--default)');
-  // setTimeout(function () {
-  //   setGalleryColorTxt(`var(--${DIRECTORIES[key].slice(0, 3)})`);
-  // }, 4000);
-  setGalleryColorTxt(`var(--${DIRECTORIES[key].slice(0, 3)})`);
   currentImg = GALLERIES[key][0];
   DISPLAY_IMG.src = `/Galleries/${DIRECTORIES[key]}${currentImg}.jpg`;
 }
 
-function setGalleryColorTxt(str) {
-  // setTimeout(function () {
-  for (i = 0; i < GALLERY_COLOR.length; i++) {
-    GALLERY_COLOR[i].style.color = str;
-  }
-  // }, 4000);
-}
-
-function displayNavArrows() {
-  for (i = 0; i < NAV_ARROWS.length; i++) {
-    NAV_ARROWS[i].style.setProperty('display', 'initial');
-  }
-}
-function hideNavArrows() {
-  for (i = 0; i < NAV_ARROWS.length; i++) {
-    NAV_ARROWS[i].style.setProperty('display', 'none');
-  }
+function displayGallery() {
+  ABOUT_PAGE.style.setProperty('display', 'none');
+  IMG_CONTAINER.style.setProperty('display', 'flex');
+  displayNavArrows();
+  resetCaptionTimer();
+  NEXT_IMG_BTN.style.opacity = 0.75;
+  PREV_IMG_BTN.style.opacity = 0.25;
 }
 
 function displayNextImg() {
@@ -290,8 +248,6 @@ function displayNextImg() {
     NEXT_IMG_BTN.style.opacity = 0.25;
   }
   if (currentImg + 1 > GALLERIES[activeGallery].length) return;
-  // setGalleryColorTxt('var(--default)');
-  // setGalleryColorTxt(`var(--${DIRECTORIES[activeGallery].slice(0, 3)})`);
   currentImg++;
   PREV_IMG_BTN.style.opacity = 0.75;
   resetAnimation(DISPLAY_IMG);
@@ -311,11 +267,40 @@ function displayPrevImg() {
   DISPLAY_IMG.src = `/Galleries/${DIRECTORIES[activeGallery]}${currentImg}.jpg`;
 }
 
-function displayRandomImg() {
-  let randomGallery = Math.floor(Math.random() * 5);
-  let imgVar = Math.floor(Math.random() * GALLERIES[randomGallery].length) + 1;
-  DISPLAY_IMG.style.animation = 'none';
-  DISPLAY_IMG.src = `/Galleries/${DIRECTORIES[randomGallery]}${imgVar}.jpg`;
+function displayNavArrows() {
+  for (i = 0; i < NAV_ARROWS.length; i++) {
+    NAV_ARROWS[i].style.setProperty('display', 'initial');
+  }
+}
+
+function hideNavArrows() {
+  for (i = 0; i < NAV_ARROWS.length; i++) {
+    NAV_ARROWS[i].style.setProperty('display', 'none');
+  }
+}
+
+// HELPER FUNCTIONS
+function navByArrowKeys(e) {
+  if (activeGallery !== undefined) {
+    if (e.code === 'ArrowRight') {
+      displayNextImg();
+    } else if (e.code === 'ArrowLeft') {
+      displayPrevImg();
+    } else return;
+  } else return;
+}
+
+function resetAnimation(el) {
+  el.style.animation = 'none';
+  el.offsetHeight; /* trigger reflow */
+  el.style.animation = null;
+}
+
+function resetCaptionTimer() {
+  IMG_CAPTION.hidden = true;
+  setTimeout(function () {
+    IMG_CAPTION.hidden = false;
+  }, 2000);
 }
 
 // ON LOAD
