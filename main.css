@@ -123,25 +123,22 @@ h1 {
 /* ABOUT PAGE */
 #about-page {
   display: none;
-  padding: 75px;
+  padding: 50px;
+  /* margin: auto; */
 }
 
 #text-content {
   font-size: 13px;
   text-align: justify;
   width: 50%;
-  left: auto;
+  margin-right: auto;
+  margin-left: auto;
   animation: fadeIn ease 2s;
 }
-
 #about-img {
-  top: 125px;
-  left: auto;
-  right: 100px;
-  position: absolute;
+  position: static;
   pointer-events: none;
-  width: 40%;
-  animation: fadeIn ease 16s;
+  width: 50%;
 }
 
 #text-content a {
