@@ -2,6 +2,7 @@
 
 :root {
   --default: whitesmoke;
+  --default-bg: black;
   --bot: #006400;
   --fin: #002f6c;
   --for: #663300;
@@ -15,7 +16,7 @@ html {
 
 body {
   color: var(--default);
-  background: black;
+  background: var(--default-bg);
   font-family: 'EB Garamond', serif;
   font-size: 1em;
   text-align: center;
@@ -112,8 +113,6 @@ h1 {
 
 #nav-menu ul li a:hover {
   cursor: pointer;
-
-  /* text-shadow: 0 0 3px black; */
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   -webkit-transition: all 0.5s ease;
@@ -124,14 +123,14 @@ h1 {
 /* ABOUT PAGE */
 #about-page {
   display: none;
-  padding: 80px;
+  padding: 75px;
 }
 
 #text-content {
   font-size: 13px;
   text-align: justify;
   width: 50%;
-  left: 100px;
+  left: auto;
   animation: fadeIn ease 2s;
 }
 
