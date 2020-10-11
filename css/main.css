@@ -372,18 +372,15 @@ aside {
 
 @media only screen and (max-width: 768px) {
   #name {
-    font-size: 20px;
+    font-size: 18px;
     position: relative;
-    top: auto;
-    right: auto;
-    bottom: auto;
-    left: auto;
   }
   #subheading {
     position: relative;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 400;
   }
+
   #image-container {
     margin: 40px;
   }
@@ -422,6 +419,20 @@ aside {
 }
 
 @media only screen and (max-width: 768px) and (orientation: landscape) {
+  #name {
+    font-size: 20px;
+    position: relative;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+  }
+  #subheading {
+    position: relative;
+    font-size: 14px;
+    font-weight: 400;
+  }
+
   #image-container img {
     height: 250px;
     width: auto;
