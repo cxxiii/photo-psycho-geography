@@ -352,22 +352,37 @@ aside {
   }
 }
 
+@media screen and (max-height: 800px) {
+  #image-container img {
+    height: 78vh;
+  }
+}
+
+@media screen and (max-height: 700px) {
+  #image-container img {
+    height: 76vh;
+  }
+}
+
+@media screen and (max-height: 600px) {
+  #image-container img {
+    height: 74vh;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   #name {
-    font-size: 18px;
+    font-size: 20px;
     position: relative;
     top: auto;
     right: auto;
     bottom: auto;
     left: auto;
-    letter-spacing: -0.04em;
   }
   #subheading {
     position: relative;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 400;
-    letter-spacing: 0.08em;
-    animation: fadeIn ease 2s;
   }
   #image-container {
     margin: 40px;
@@ -382,12 +397,6 @@ aside {
   }
   .nav-arrow {
     margin: 10px;
-  }
-  aside {
-    bottom: auto;
-    right: auto;
-    position: absolute;
-    align-self: flex-end;
   }
   nav ul li a {
     font-size: 10px;
@@ -405,14 +414,7 @@ aside {
     margin-right: auto;
   }
   #about-img {
-    top: auto;
-    left: auto;
-    right: auto;
-    position: static;
-    pointer-events: none;
     width: 100%;
-    height: auto;
-    animation: fadeIn ease 16s;
   }
   nav ul li {
     margin-right: auto;

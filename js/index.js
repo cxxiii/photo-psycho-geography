@@ -6,9 +6,8 @@ let prevGallery;
 let currentImgNum;
 
 // PAGE ELEMENTS
-const HEADER = document.querySelector('header');
-const HEADING = document.querySelector('header h1');
 const SUB_HEADING = document.querySelector('#subheading');
+
 const ABOUT = document.querySelector('#about');
 const BOTANICAL = document.querySelector('.botanical');
 const FINLAND = document.querySelector('.finland');
@@ -26,7 +25,6 @@ const DISPLAY_IMG = document.querySelector('#image-container #display-img');
 const IMG_CAPTION = document.querySelector('aside');
 
 const ABOUT_PAGE = document.querySelector('#about-page');
-const ABOUT_IMG = document.querySelector('#about-img');
 
 IMG_CAPTION.hidden = true;
 
@@ -98,9 +96,7 @@ function selectGallery(key) {
   SUB_HEADING.innerText = GALLERY_MENU_LINKS[key].innerText;
   GALLERY_MENU_LINKS[key].innerText = '';
   GALLERY_MENU_LINKS[key].style.marginLeft = '-1em';
-  SUB_HEADING.style.color = `var(--${DIRECTORIES[key].slice(0, 3)})`;
-  PREV_IMG_BTN.style.color = `var(--${DIRECTORIES[key].slice(0, 3)})`;
-  NEXT_IMG_BTN.style.color = `var(--${DIRECTORIES[key].slice(0, 3)})`;
+  setGalleryColor(DIRECTORIES[key]);
   currentImgNum = GALLERIES[key][0];
   DISPLAY_IMG.src = `/Galleries/${DIRECTORIES[key]}${currentImgNum}.jpg`;
 }
@@ -121,7 +117,6 @@ function displayNextImg() {
   if (currentImgNum + 1 > GALLERIES[activeGallery].length) return;
   currentImgNum++;
   PREV_IMG_BTN.style.opacity = 0.75;
-  resetAnimation(DISPLAY_IMG);
   resetCaptionTimer();
   DISPLAY_IMG.src = `/Galleries/${DIRECTORIES[activeGallery]}${currentImgNum}.jpg`;
 }
@@ -133,7 +128,6 @@ function displayPrevImg() {
   if (currentImgNum - 1 === 0) return;
   currentImgNum--;
   NEXT_IMG_BTN.style.opacity = 0.75;
-  resetAnimation(DISPLAY_IMG);
   resetCaptionTimer();
   DISPLAY_IMG.src = `/Galleries/${DIRECTORIES[activeGallery]}${currentImgNum}.jpg`;
 }
@@ -151,6 +145,18 @@ function hideNavArrows() {
 }
 
 // HELPER FUNCTIONS
+function displayNavArrows() {
+  for (i = 0; i < NAV_ARROWS.length; i++) {
+    NAV_ARROWS[i].style.setProperty('display', 'initial');
+  }
+}
+
+function hideNavArrows() {
+  for (i = 0; i < NAV_ARROWS.length; i++) {
+    NAV_ARROWS[i].style.setProperty('display', 'none');
+  }
+}
+
 function navByArrowKeys(e) {
   if (activeGallery !== undefined) {
     if (e.code === 'ArrowRight') {
@@ -161,10 +167,10 @@ function navByArrowKeys(e) {
   } else return;
 }
 
-function resetAnimation(el) {
-  el.style.animation = 'none';
-  el.offsetHeight; /* trigger reflow */
-  el.style.animation = null;
+function setGalleryColor(dirStr) {
+  SUB_HEADING.style.color = `var(--${dirStr.slice(0, 3)})`;
+  PREV_IMG_BTN.style.color = `var(--${dirStr.slice(0, 3)})`;
+  NEXT_IMG_BTN.style.color = `var(--${dirStr.slice(0, 3)})`;
 }
 
 function resetCaptionTimer() {
