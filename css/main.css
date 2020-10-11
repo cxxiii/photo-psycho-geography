@@ -188,8 +188,6 @@ aside {
   font-style: italic;
   font-weight: lighter;
   animation: fadeIn ease-out 4s;
-  bottom: auto;
-  right: auto;
   position: absolute;
   align-self: flex-end;
 }

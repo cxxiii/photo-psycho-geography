@@ -1,7 +1,9 @@
+const GALLERY_NAMES = ['Botanical', 'Finland', 'Forest', 'Ireland', 'Psycho'];
+
 // GLOBAL VARIABLES
 let activeGallery;
 let prevGallery;
-let currentImg;
+let currentImgNum;
 
 // PAGE ELEMENTS
 const HEADER = document.querySelector('header');
@@ -13,8 +15,6 @@ const FINLAND = document.querySelector('.finland');
 const FOREST = document.querySelector('.forest');
 const IRELAND = document.querySelector('.ireland');
 const PSYCHO = document.querySelector('.psycho');
-
-const GALLERY_NAMES = ['Botanical', 'Finland', 'Forest', 'Ireland', 'Psycho'];
 const GALLERY_MENU_LINKS = [BOTANICAL, FINLAND, FOREST, IRELAND, PSYCHO];
 
 const NAV_ARROWS = document.querySelectorAll('.nav-arrow');
@@ -101,8 +101,8 @@ function selectGallery(key) {
   SUB_HEADING.style.color = `var(--${DIRECTORIES[key].slice(0, 3)})`;
   PREV_IMG_BTN.style.color = `var(--${DIRECTORIES[key].slice(0, 3)})`;
   NEXT_IMG_BTN.style.color = `var(--${DIRECTORIES[key].slice(0, 3)})`;
-  currentImg = GALLERIES[key][0];
-  DISPLAY_IMG.src = `/Galleries/${DIRECTORIES[key]}${currentImg}.jpg`;
+  currentImgNum = GALLERIES[key][0];
+  DISPLAY_IMG.src = `/Galleries/${DIRECTORIES[key]}${currentImgNum}.jpg`;
 }
 
 function displayGallery() {
@@ -115,27 +115,27 @@ function displayGallery() {
 }
 
 function displayNextImg() {
-  if (currentImg + 1 === GALLERIES[activeGallery].length) {
+  if (currentImgNum + 1 === GALLERIES[activeGallery].length) {
     NEXT_IMG_BTN.style.opacity = 0.25;
   }
-  if (currentImg + 1 > GALLERIES[activeGallery].length) return;
-  currentImg++;
+  if (currentImgNum + 1 > GALLERIES[activeGallery].length) return;
+  currentImgNum++;
   PREV_IMG_BTN.style.opacity = 0.75;
   resetAnimation(DISPLAY_IMG);
   resetCaptionTimer();
-  DISPLAY_IMG.src = `/Galleries/${DIRECTORIES[activeGallery]}${currentImg}.jpg`;
+  DISPLAY_IMG.src = `/Galleries/${DIRECTORIES[activeGallery]}${currentImgNum}.jpg`;
 }
 
 function displayPrevImg() {
-  if (currentImg - 1 === 1) {
+  if (currentImgNum - 1 === 1) {
     PREV_IMG_BTN.style.opacity = 0.25;
   }
-  if (currentImg - 1 === 0) return;
-  currentImg--;
+  if (currentImgNum - 1 === 0) return;
+  currentImgNum--;
   NEXT_IMG_BTN.style.opacity = 0.75;
   resetAnimation(DISPLAY_IMG);
   resetCaptionTimer();
-  DISPLAY_IMG.src = `/Galleries/${DIRECTORIES[activeGallery]}${currentImg}.jpg`;
+  DISPLAY_IMG.src = `/Galleries/${DIRECTORIES[activeGallery]}${currentImgNum}.jpg`;
 }
 
 function displayNavArrows() {
