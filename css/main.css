@@ -396,7 +396,7 @@ aside {
     margin: 10px;
   }
   nav ul li a {
-    font-size: 10px;
+    font-size: 8px;
     font-weight: bold;
     text-decoration: none;
   }
@@ -431,6 +431,9 @@ aside {
     position: relative;
     font-size: 14px;
     font-weight: 400;
+  }
+  nav ul li a {
+    font-size: 10px;
   }
 
   #image-container img {
