@@ -1,4 +1,3 @@
-// DATA CONSTANTS
 const GALLERIES = [
   [
     1,
