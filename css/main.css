@@ -32,7 +32,7 @@ body {
 
 a,
 li {
-  color: #656565;
+  color: #444444;
 }
 
 a:hover {
@@ -69,16 +69,16 @@ h1 {
 
 #name {
   position: absolute;
-  right: 289px;
+  right: 290px;
   left: 0;
-  letter-spacing: -0.01em;
+  letter-spacing: 0em;
 }
 
 #subheading {
   position: absolute;
-  font-size: 24px;
+  font-size: 21px;
   font-weight: lighter;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.04em;
   transition: color ease 0.2s;
 }
 
@@ -95,19 +95,16 @@ nav {
 }
 
 nav ul li {
+  font-size: 13px;
+  font-weight: bold;
   display: inline;
   margin-left: 1em;
   animation: fadeIn ease 4s;
 }
 
 nav ul li a {
-  font-size: 13px;
-  font-weight: bold;
   text-decoration: none;
   transition: all ease 2s;
-}
-
-nav ul li a {
   -moz-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   -webkit-transition: all 0.2s ease;

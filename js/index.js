@@ -78,7 +78,6 @@ function displayAboutPage() {
   }
   ABOUT.innerText = '';
   ABOUT.style.marginLeft = '-1em';
-  resetAnimation(SUB_HEADING);
   SUB_HEADING.innerText = 'About';
   SUB_HEADING.style.color = 'var(--default)';
   IMG_CONTAINER.style.setProperty('display', 'none');
@@ -96,7 +95,6 @@ function selectGallery(key) {
     GALLERY_MENU_LINKS[prevGallery].innerText = GALLERY_NAMES[prevGallery];
     GALLERY_MENU_LINKS[prevGallery].style.marginLeft = '';
   }
-  resetAnimation(SUB_HEADING);
   SUB_HEADING.innerText = GALLERY_MENU_LINKS[key].innerText;
   GALLERY_MENU_LINKS[key].innerText = '';
   GALLERY_MENU_LINKS[key].style.marginLeft = '-1em';
