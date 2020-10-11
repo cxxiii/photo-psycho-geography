@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=EB+Garamond&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Cinzel+Decorative&family=EB+Garamond&display=swap');
 
 :root {
   --default: whitesmoke;
@@ -32,7 +32,7 @@ body {
 
 a,
 li {
-  color: rgb(60, 60, 60);
+  color: #656565;
 }
 
 a:hover {
@@ -42,19 +42,19 @@ a:hover {
 
 #subheading,
 .nav-arrow,
-#nav-menu ul li a:hover {
+nav ul li a:hover {
   filter: saturate(0.5);
 }
 
 /* HEADER */
-#header {
+header {
   line-height: 0;
   margin-top: 40px;
 }
 
-#header h1 {
+header h1 {
   letter-spacing: 4px;
-  font-weight: 400;
+  font-weight: 100;
   position: sticky;
 }
 
@@ -63,9 +63,13 @@ h1 {
   font-size: 2em;
 }
 
+.deco {
+  font-family: 'Cinzel Decorative';
+}
+
 #name {
   position: absolute;
-  right: 288px;
+  right: 289px;
   left: 0;
   letter-spacing: -0.01em;
 }
@@ -73,13 +77,13 @@ h1 {
 #subheading {
   position: absolute;
   font-size: 24px;
-  font-weight: 400;
+  font-weight: lighter;
   letter-spacing: 0.08em;
-  transition: color ease 0.8s;
+  transition: color ease 0.2s;
 }
 
 /* NAVIGATION MENU */
-#nav-menu {
+nav {
   position: absolute;
   text-decoration: none;
   top: 50px;
@@ -90,20 +94,20 @@ h1 {
   line-height: 0;
 }
 
-#nav-menu ul li {
+nav ul li {
   display: inline;
-  margin-left: 15px;
+  margin-left: 1em;
   animation: fadeIn ease 4s;
 }
 
-#nav-menu ul li a {
+nav ul li a {
   font-size: 13px;
   font-weight: bold;
   text-decoration: none;
-  transition: all ease 10s;
+  transition: all ease 2s;
 }
 
-#nav-menu ul li a {
+nav ul li a {
   -moz-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   -webkit-transition: all 0.2s ease;
@@ -111,7 +115,7 @@ h1 {
   transition: all 0.2s ease;
 }
 
-#nav-menu ul li a:hover {
+nav ul li a:hover {
   cursor: pointer;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
@@ -354,9 +358,6 @@ aside {
 }
 
 @media only screen and (max-width: 768px) {
-  #header h1 {
-    letter-spacing: -2px;
-  }
   #name {
     font-size: 18px;
     position: relative;
@@ -393,7 +394,7 @@ aside {
     position: absolute;
     align-self: flex-end;
   }
-  #nav-menu ul li a {
+  nav ul li a {
     font-size: 10px;
     font-weight: bold;
     text-decoration: none;
@@ -418,7 +419,7 @@ aside {
     height: auto;
     animation: fadeIn ease 16s;
   }
-  #nav-menu ul li {
+  nav ul li {
     margin-right: auto;
   }
 }

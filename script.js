@@ -131,8 +131,8 @@ let prevGallery;
 let currentImg;
 
 // PAGE ELEMENTS
-const HEADER = document.querySelector('#header');
-const HEADING = document.querySelector('#header h1');
+const HEADER = document.querySelector('header');
+const HEADING = document.querySelector('header h1');
 const SUB_HEADING = document.querySelector('#subheading');
 const ABOUT = document.querySelector('#about');
 const BOTANICAL = document.querySelector('.botanical');
