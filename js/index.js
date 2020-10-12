@@ -32,27 +32,22 @@ IMG_CAPTION.hidden = true;
 ABOUT.addEventListener('click', displayAboutPage);
 BOTANICAL.addEventListener('click', function () {
   selectGallery(0);
-  displayGallery();
-  SUB_HEADING.style.setProperty('filter', 'brightness(100%)');
+  SUB_HEADING.style.setProperty('filter', 'brightness(125%)');
 });
 FINLAND.addEventListener('click', function () {
   selectGallery(1);
-  displayGallery();
-  SUB_HEADING.style.setProperty('filter', 'brightness(125%)');
+  SUB_HEADING.style.setProperty('filter', 'brightness(175%)');
 });
 FOREST.addEventListener('click', function () {
   selectGallery(2);
-  displayGallery();
-  SUB_HEADING.style.setProperty('filter', 'brightness(100%)');
+  SUB_HEADING.style.setProperty('filter', 'brightness(125%)');
 });
 IRELAND.addEventListener('click', function () {
   selectGallery(3);
-  displayGallery();
   SUB_HEADING.style.setProperty('filter', 'brightness(100%)');
 });
 PSYCHO.addEventListener('click', function () {
   selectGallery(4);
-  displayGallery();
   SUB_HEADING.style.setProperty('filter', 'brightness(100%)');
 });
 NEXT_IMG_BTN.addEventListener('click', displayNextImg);
@@ -62,18 +57,14 @@ document.addEventListener('keydown', navByArrowKeys);
 // MAIN FUNCTIONS
 function displayRandomImg() {
   const randomGallery = Math.floor(Math.random() * 5);
-  const imgVar =
+  currentImgNum =
     Math.floor(Math.random() * GALLERIES[randomGallery].length) + 1;
   DISPLAY_IMG.style.animation = 'none';
-  DISPLAY_IMG.src = `/Galleries/${DIRECTORIES[randomGallery]}${imgVar}.jpg`;
+  DISPLAY_IMG.src = `/Galleries/${DIRECTORIES[randomGallery]}${currentImgNum}.jpg`;
 }
 
 function displayAboutPage() {
-  prevGallery = activeGallery;
-  if (prevGallery !== undefined) {
-    GALLERY_MENU_LINKS[prevGallery].innerText = GALLERY_NAMES[prevGallery];
-    GALLERY_MENU_LINKS[prevGallery].style.marginLeft = '';
-  }
+  setPrevGallery();
   ABOUT.innerText = '';
   ABOUT.style.marginLeft = '-1em';
   SUB_HEADING.innerText = 'About';
@@ -87,27 +78,15 @@ function displayAboutPage() {
 function selectGallery(key) {
   ABOUT.innerText = 'About';
   ABOUT.style.marginLeft = '';
-  prevGallery = activeGallery;
+  setPrevGallery();
   activeGallery = key;
-  if (prevGallery !== undefined) {
-    GALLERY_MENU_LINKS[prevGallery].innerText = GALLERY_NAMES[prevGallery];
-    GALLERY_MENU_LINKS[prevGallery].style.marginLeft = '';
-  }
   SUB_HEADING.innerText = GALLERY_MENU_LINKS[key].innerText;
   GALLERY_MENU_LINKS[key].innerText = '';
   GALLERY_MENU_LINKS[key].style.marginLeft = '-1em';
   setGalleryColor(DIRECTORIES[key]);
   currentImgNum = GALLERIES[key][0];
   DISPLAY_IMG.src = `/Galleries/${DIRECTORIES[key]}${currentImgNum}.jpg`;
-}
-
-function displayGallery() {
-  ABOUT_PAGE.style.setProperty('display', 'none');
-  IMG_CONTAINER.style.setProperty('display', 'flex');
-  displayNavArrows();
-  resetCaptionTimer();
-  NEXT_IMG_BTN.style.opacity = 0.75;
-  PREV_IMG_BTN.style.opacity = 0.25;
+  displayGallery();
 }
 
 function displayNextImg() {
@@ -117,8 +96,7 @@ function displayNextImg() {
   if (currentImgNum + 1 > GALLERIES[activeGallery].length) return;
   currentImgNum++;
   PREV_IMG_BTN.style.opacity = 0.75;
-  resetCaptionTimer();
-  DISPLAY_IMG.src = `/Galleries/${DIRECTORIES[activeGallery]}${currentImgNum}.jpg`;
+  displayGalleryImg();
 }
 
 function displayPrevImg() {
@@ -128,23 +106,32 @@ function displayPrevImg() {
   if (currentImgNum - 1 === 0) return;
   currentImgNum--;
   NEXT_IMG_BTN.style.opacity = 0.75;
+  displayGalleryImg();
+}
+
+// HELPER FUNCTIONS
+function displayGallery() {
+  ABOUT_PAGE.style.setProperty('display', 'none');
+  IMG_CONTAINER.style.setProperty('display', 'flex');
+  displayNavArrows();
+  resetCaptionTimer();
+  NEXT_IMG_BTN.style.opacity = 0.75;
+  PREV_IMG_BTN.style.opacity = 0.25;
+}
+
+function setPrevGallery() {
+  prevGallery = activeGallery;
+  if (prevGallery !== undefined) {
+    GALLERY_MENU_LINKS[prevGallery].innerText = GALLERY_NAMES[prevGallery];
+    GALLERY_MENU_LINKS[prevGallery].style.marginLeft = '';
+  }
+}
+
+function displayGalleryImg() {
   resetCaptionTimer();
   DISPLAY_IMG.src = `/Galleries/${DIRECTORIES[activeGallery]}${currentImgNum}.jpg`;
 }
 
-function displayNavArrows() {
-  for (i = 0; i < NAV_ARROWS.length; i++) {
-    NAV_ARROWS[i].style.setProperty('display', 'initial');
-  }
-}
-
-function hideNavArrows() {
-  for (i = 0; i < NAV_ARROWS.length; i++) {
-    NAV_ARROWS[i].style.setProperty('display', 'none');
-  }
-}
-
-// HELPER FUNCTIONS
 function displayNavArrows() {
   for (i = 0; i < NAV_ARROWS.length; i++) {
     NAV_ARROWS[i].style.setProperty('display', 'initial');

@@ -76,7 +76,7 @@ h1 {
 
 #subheading {
   position: absolute;
-  font-size: 21px;
+  font-size: 20px;
   font-weight: lighter;
   letter-spacing: 0.04em;
   transition: color ease 0.2s;
@@ -161,14 +161,14 @@ nav ul li a:hover {
 }
 
 .nav-arrow {
+  display: none;
   position: absolute;
   font-family: 'Cinzel', serif;
   font-size: 4em;
   cursor: pointer;
   line-height: 0;
-  display: none;
   margin: 75px;
-  transition: color ease-out 0.8s;
+  transition: color ease 0.2s;
 }
 
 #arrow-right {
