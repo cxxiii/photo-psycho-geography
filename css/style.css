@@ -96,7 +96,7 @@ nav {
 
 nav ul li {
   font-size: 13px;
-  font-weight: bold;
+  font-weight: 700;
   display: inline;
   margin-left: 1em;
   animation: fadeIn ease 4s;

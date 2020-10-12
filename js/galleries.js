@@ -1,3 +1,12 @@
+// GALLERY DATA CONSTANTS
+const GALLERY_NAMES = ['Botanical', 'Finland', 'Forest', 'Ireland', 'Psycho'];
+const DIRECTORIES = {
+  0: 'botanical/b',
+  1: 'finland/f',
+  2: 'forest/fo',
+  3: 'ireland/irl',
+  4: 'psycho/p',
+};
 const GALLERIES = [
   [
     1,
@@ -177,10 +186,3 @@ const GALLERIES = [
     37,
   ],
 ];
-const DIRECTORIES = {
-  0: 'botanical/b',
-  1: 'finland/f',
-  2: 'forest/fo',
-  3: 'ireland/irl',
-  4: 'psycho/p',
-};
