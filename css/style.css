@@ -175,11 +175,14 @@ nav ul li a:hover {
 
 aside {
   font-size: 13px;
-  font-style: italic;
   font-weight: lighter;
   animation: fadeIn ease-out 4s;
   position: absolute;
   align-self: flex-end;
+}
+
+aside #img-location {
+  font-style: italic;
 }
 
 /* ANIMATIONS */

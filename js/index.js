@@ -22,9 +22,14 @@ const IMG_CONTAINER = document.querySelector('#image-container');
 const DISPLAY_IMG = document.querySelector('#image-container #display-img');
 const IMG_CAPTION = document.querySelector('aside');
 
+const IMG_TITLE = document.querySelector('#img-title');
+const IMG_LOCATION = document.querySelector('#img-location');
+const IMG_TITLE_LOC_SEP = document.querySelector('#img-title-loc-sep');
+
 const ABOUT_PAGE = document.querySelector('#about-page');
 
 IMG_CAPTION.hidden = true;
+IMG_TITLE_LOC_SEP.hidden = true;
 
 // EVENT LISTENERS
 ABOUT.addEventListener('click', displayAboutPage);
@@ -55,10 +60,10 @@ document.addEventListener('keydown', navByArrowKeys);
 // MAIN FUNCTIONS
 function displayRandomImg() {
   const randomGallery = Math.floor(Math.random() * 5);
-  currentImgNum =
-    Math.floor(Math.random() * GALLERIES[randomGallery].length) + 1;
-  DISPLAY_IMG.style.animation = 'none';
-  DISPLAY_IMG.src = `/Galleries/${DIRECTORIES[randomGallery]}${currentImgNum}.jpg`;
+  currentImgNum = Math.floor(
+    Math.random() * GALLERIES[randomGallery].imgs.length
+  );
+  DISPLAY_IMG.src = `/${GALLERIES.dirName}/${GALLERIES[randomGallery].dirName}/${GALLERIES[randomGallery].imgs[currentImgNum].file}`;
 }
 
 function displayAboutPage() {
@@ -81,27 +86,27 @@ function selectGallery(key) {
   SUB_HEADING.innerText = GALLERY_MENU_LINKS[key].innerText;
   GALLERY_MENU_LINKS[key].innerText = '';
   GALLERY_MENU_LINKS[key].style.marginLeft = '-1em';
-  setGalleryColor(DIRECTORIES[key]);
-  currentImgNum = GALLERIES[key][0];
-  DISPLAY_IMG.src = `/Galleries/${DIRECTORIES[key]}${currentImgNum}.jpg`;
+  setGalleryColor(GALLERIES[key].dirName);
+  currentImgNum = GALLERIES[key].imgs.indexOf(GALLERIES[key].imgs[0]);
+  DISPLAY_IMG.src = `/${GALLERIES.dirName}/${GALLERIES[key].dirName}/${GALLERIES[key].imgs[currentImgNum].file}`;
   displayGallery();
 }
 
 function displayNextImg() {
-  if (currentImgNum + 1 === GALLERIES[activeGallery].length) {
+  if (currentImgNum + 2 === GALLERIES[activeGallery].imgs.length) {
     NEXT_IMG_BTN.style.opacity = 0.25;
   }
-  if (currentImgNum + 1 > GALLERIES[activeGallery].length) return;
+  if (currentImgNum + 1 === GALLERIES[activeGallery].imgs.length) return;
   currentImgNum++;
   PREV_IMG_BTN.style.opacity = 0.75;
   displayGalleryImg();
 }
 
 function displayPrevImg() {
-  if (currentImgNum - 1 === 1) {
+  if (currentImgNum - 1 === 0) {
     PREV_IMG_BTN.style.opacity = 0.25;
   }
-  if (currentImgNum - 1 === 0) return;
+  if (currentImgNum - 1 === -1) return;
   currentImgNum--;
   NEXT_IMG_BTN.style.opacity = 0.75;
   displayGalleryImg();
