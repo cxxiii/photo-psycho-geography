@@ -338,15 +338,15 @@ aside {
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 760px) {
   #name {
     font-size: 18px;
     position: relative;
   }
   #subheading {
     position: relative;
-    font-size: 12px;
-    font-weight: 400;
+    font-size: 14px;
+    font-weight: =400;
   }
 
   #image-container {
@@ -386,7 +386,7 @@ aside {
   }
 }
 
-@media only screen and (max-width: 768px) and (orientation: landscape) {
+@media only screen and (max-width: 760px) and (orientation: landscape) {
   #name {
     font-size: 20px;
     position: relative;
