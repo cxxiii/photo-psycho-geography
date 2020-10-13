@@ -71,7 +71,7 @@ h1 {
   position: absolute;
   right: 292px;
   left: 0;
-  letter-spacing: 0em;
+  letter-spacing: 0;
 }
 
 #subheading {
@@ -104,28 +104,18 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  transition: all ease 2s;
-  -moz-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  -webkit-transition: all 0.2s ease;
-  -ms-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 
 nav ul li a:hover {
   cursor: pointer;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  -webkit-transition: all 0.5s ease;
-  -ms-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  transition: all 0.2s ease;
 }
 
 /* ABOUT PAGE */
 #about-page {
   display: none;
   padding: 50px;
-  /* margin: auto; */
 }
 
 #text-content {
@@ -205,18 +195,10 @@ aside {
 
 .fade-in {
   animation: fadeIn ease 3s;
-  -webkit-animation: fadeIn ease 10s;
-  -moz-animation: fadeIn ease 10s;
-  -o-animation: fadeIn ease 10s;
-  -ms-animation: fadeIn ease 10s;
 }
 
 .fade-out {
   animation: fadeOut ease 3s;
-  -webkit-animation: fadeOut ease 8s;
-  -moz-animation: fadeOut ease 8s;
-  -o-animation: fadeOut ease 8s;
-  -ms-animation: fadeOut ease 8s;
 }
 
 [class*='botanical']:hover {
@@ -233,20 +215,6 @@ aside {
 }
 [class*='psycho']:hover {
   color: var(--psy);
-}
-
-.transition {
-  -moz-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  -webkit-transition: all 0.2s ease;
-  -ms-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-}
-
-.no-select {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -khtml-user-select: none;
 }
 
 @keyframes fadeIn {
