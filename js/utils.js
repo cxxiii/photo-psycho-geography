@@ -1,4 +1,4 @@
-// UTILITY FUNCTIONS
+// HELPER FUNCTIONS
 function displayGallery() {
   ABOUT_PAGE.style.setProperty('display', 'none');
   IMG_CONTAINER.style.setProperty('display', 'flex');
