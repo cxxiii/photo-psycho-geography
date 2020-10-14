@@ -56,7 +56,7 @@ function resetCaptionTimer() {
   IMG_CAPTION.hidden = true;
   setTimeout(function () {
     IMG_CAPTION.hidden = false;
-  }, 1000);
+  }, 2000);
 }
 
 function setGalleryColor(dirStr) {

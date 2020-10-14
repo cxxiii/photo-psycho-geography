@@ -199,7 +199,6 @@ figcaption {
 aside {
   font-size: 13px;
   font-weight: lighter;
-  animation: fadeIn ease-out 4s;
   position: absolute;
   align-self: flex-end;
 }
@@ -210,13 +209,13 @@ aside #img-location {
 
 /* ANIMATIONS */
 .one {
-  animation: fadeIn ease 3s;
+  animation: fadeIn ease 4s;
 }
 .two {
   animation: fadeIn ease 6s;
 }
 .three {
-  animation: fadeIn ease 9s;
+  animation: fadeIn ease 8s;
 }
 
 @keyframes fadeIn {
