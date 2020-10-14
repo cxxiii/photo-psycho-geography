@@ -54,7 +54,7 @@ function setImgCaption() {
 
 function resetCaptionTimer() {
   IMG_CAPTION.hidden = true;
-  setTimeout(function () {
+  setTimeout(() => {
     IMG_CAPTION.hidden = false;
   }, 1500);
 }
