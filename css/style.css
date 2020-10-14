@@ -81,7 +81,7 @@ h1 {
   font-size: 20px;
   font-weight: lighter;
   letter-spacing: 0.04em;
-  transition: color ease 0.3s;
+  transition: color ease 0.2s;
 }
 
 /* NAVIGATION MENU */
@@ -92,7 +92,6 @@ nav {
   left: 0;
   bottom: 0;
   right: 0;
-
   line-height: 0;
 }
 
@@ -110,7 +109,7 @@ nav ul li a {
 
 nav ul li a:hover {
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
 }
 
 [class*='botanical']:hover {
@@ -179,7 +178,7 @@ figcaption {
   cursor: pointer;
   line-height: 0;
   margin: 75px;
-  transition: color ease 0.3s;
+  transition: color ease 0.2s;
 }
 
 #arrow-right {
@@ -213,7 +212,7 @@ aside #img-location {
   animation: fadeIn ease 6s;
 }
 .three {
-  animation: fadeIn ease 9s;
+  animation: fadeIn ease 7.5s;
 }
 
 @keyframes fadeIn {
