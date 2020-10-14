@@ -138,7 +138,7 @@ const GALLERIES = {
       { file: 'irl4.jpg', title: 'Restlessness', location: 'Dingle Peninsula' },
       { file: 'irl6.jpg', title: 'Stagnation', location: 'Dingle Peninsula' },
       { file: 'irl7.jpg', title: 'Exhaustion', location: 'Dingle Peninsula' },
-      { file: 'irl8.jpg', title: 'Self-control', location: 'Dingle Peninsula' },
+      { file: 'irl8.jpg', title: 'Shame', location: 'Dingle Peninsula' },
       {
         file: 'irl9.jpg',
         title: 'Let go, let go',
