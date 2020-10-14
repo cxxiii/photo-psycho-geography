@@ -33,23 +33,23 @@ IMG_TITLE_LOC_SEP.hidden = true;
 
 // EVENT LISTENERS
 ABOUT.addEventListener('click', displayAboutPage);
-BOTANICAL.addEventListener('click', function () {
+BOTANICAL.addEventListener('click', () => {
   selectGallery(0);
   SUB_HEADING.style.setProperty('filter', 'brightness(125%)');
 });
-FINLAND.addEventListener('click', function () {
+FINLAND.addEventListener('click', () => {
   selectGallery(1);
   SUB_HEADING.style.setProperty('filter', 'brightness(175%)');
 });
-FOREST.addEventListener('click', function () {
+FOREST.addEventListener('click', () => {
   selectGallery(2);
   SUB_HEADING.style.setProperty('filter', 'brightness(125%)');
 });
-IRELAND.addEventListener('click', function () {
+IRELAND.addEventListener('click', () => {
   selectGallery(3);
   SUB_HEADING.style.setProperty('filter', 'brightness(100%)');
 });
-PSYCHO.addEventListener('click', function () {
+PSYCHO.addEventListener('click', () => {
   selectGallery(4);
   SUB_HEADING.style.setProperty('filter', 'brightness(100%)');
 });

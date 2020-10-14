@@ -142,10 +142,15 @@ nav ul li a:hover {
   margin-left: auto;
   animation: fadeIn ease 2s;
 }
+
 #about-img {
   position: static;
   pointer-events: none;
   width: 50%;
+}
+
+figcaption {
+  font-size: xx-small;
 }
 
 #text-content a {

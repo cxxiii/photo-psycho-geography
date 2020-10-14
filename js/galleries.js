@@ -1,5 +1,4 @@
-// GALLERY DATA CONSTANTS
-
+// GALLERY DATA CONSTANT
 const GALLERIES = {
   dirName: 'Galleries',
   0: {
