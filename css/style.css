@@ -112,6 +112,22 @@ nav ul li a:hover {
   transition: all 0.2s ease;
 }
 
+[class*='botanical']:hover {
+  color: var(--bot);
+}
+[class*='finland']:hover {
+  color: var(--fin);
+}
+[class*='forest']:hover {
+  color: var(--for);
+}
+[class*='ireland']:hover {
+  color: var(--ire);
+}
+[class*='psycho']:hover {
+  color: var(--psy);
+}
+
 /* ABOUT PAGE */
 #about-page {
   display: none;
@@ -187,7 +203,7 @@ aside #img-location {
 
 /* ANIMATIONS */
 .one {
-  animation: fadeIn ease 6s;
+  animation: fadeIn ease 4s;
 }
 .two {
   animation: fadeIn ease 8s;
@@ -195,29 +211,8 @@ aside #img-location {
 .three {
   animation: fadeIn ease 10s;
 }
-
-.fade-in {
-  animation: fadeIn ease 3s;
-}
-
-.fade-out {
-  animation: fadeOut ease 3s;
-}
-
-[class*='botanical']:hover {
-  color: var(--bot);
-}
-[class*='finland']:hover {
-  color: var(--fin);
-}
-[class*='forest']:hover {
-  color: var(--for);
-}
-[class*='ireland']:hover {
-  color: var(--ire);
-}
-[class*='psycho']:hover {
-  color: var(--psy);
+.four {
+  animation: fadeIn ease 12s;
 }
 
 @keyframes fadeIn {
