@@ -1,3 +1,5 @@
+// Written by Nikolay Rademacher, github.com/cxxiii
+
 // GALLERY DATA CONSTANT
 const GALLERIES = {
   dirName: 'Galleries',

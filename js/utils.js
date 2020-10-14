@@ -1,3 +1,5 @@
+// Written by Nikolay Rademacher, github.com/cxxiii
+
 // HELPER FUNCTIONS
 function displayGallery() {
   ABOUT_PAGE.style.setProperty('display', 'none');

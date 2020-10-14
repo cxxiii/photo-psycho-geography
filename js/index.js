@@ -1,3 +1,5 @@
+// Written by Nikolay Rademacher, github.com/cxxiii
+
 // GLOBAL VARIABLES
 let activeGallery;
 let prevGallery;
