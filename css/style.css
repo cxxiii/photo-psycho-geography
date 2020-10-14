@@ -81,7 +81,7 @@ h1 {
   font-size: 20px;
   font-weight: lighter;
   letter-spacing: 0.04em;
-  transition: color ease 0.2s;
+  transition: color ease 0.3s;
 }
 
 /* NAVIGATION MENU */
@@ -101,17 +101,16 @@ nav ul li {
   font-weight: 700;
   display: inline;
   margin-left: 1em;
-  animation: fadeIn ease 4s;
+  /* animation: fadeIn ease 5s; */
 }
 
 nav ul li a {
   text-decoration: none;
-  transition: all 0.2s ease;
 }
 
 nav ul li a:hover {
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
 }
 
 [class*='botanical']:hover {
@@ -142,7 +141,6 @@ nav ul li a:hover {
   width: 50%;
   margin-right: auto;
   margin-left: auto;
-  animation: fadeIn ease 2s;
 }
 
 #about-img {
@@ -181,7 +179,7 @@ figcaption {
   cursor: pointer;
   line-height: 0;
   margin: 75px;
-  transition: color ease 0.2s;
+  transition: color ease 0.3s;
 }
 
 #arrow-right {
@@ -209,13 +207,13 @@ aside #img-location {
 
 /* ANIMATIONS */
 .one {
-  animation: fadeIn ease 4s;
+  animation: fadeIn ease 3s;
 }
 .two {
-  animation: fadeIn ease 8s;
+  animation: fadeIn ease 6s;
 }
 .three {
-  animation: fadeIn ease 12s;
+  animation: fadeIn ease 9s;
 }
 
 @keyframes fadeIn {
