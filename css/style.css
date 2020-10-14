@@ -212,10 +212,10 @@ aside #img-location {
   animation: fadeIn ease 4s;
 }
 .two {
-  animation: fadeIn ease 6s;
+  animation: fadeIn ease 8s;
 }
 .three {
-  animation: fadeIn ease 8s;
+  animation: fadeIn ease 12s;
 }
 
 @keyframes fadeIn {
