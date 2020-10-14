@@ -1,6 +1,6 @@
 // Written by Nikolay Rademacher, github.com/cxxiii
 
-// GALLERY DATA CONSTANT
+// GALLERIES DATA CONSTANT
 const GALLERIES = {
   dirName: 'Galleries',
   0: {
@@ -267,7 +267,7 @@ const GALLERIES = {
         title:
           '"I am terrified of the bleak stretch of time, a cold tundra of time" (Martha Gellhorn)',
       },
-      { file: 'p15.jpg', title: 'Stuck' },
+      { file: 'p15.jpg', title: 'Stuck.' },
       {
         file: 'p16.jpg',
         title:

@@ -22,17 +22,11 @@ function displayGalleryImg() {
 }
 
 function displayNavArrows() {
-  for (i = 0; i < NAV_ARROWS.length; i++) {
-    NAV_ARROWS[i].style.setProperty('display', 'initial');
+  for (navArrow of NAV_ARROWS) {
+    navArrow.style.setProperty('display', 'initial');
   }
   NEXT_IMG_BTN.style.opacity = 0.75;
   PREV_IMG_BTN.style.opacity = 0.25;
-}
-
-function hideNavArrows() {
-  for (i = 0; i < NAV_ARROWS.length; i++) {
-    NAV_ARROWS[i].style.setProperty('display', 'none');
-  }
 }
 
 function navByArrowKeys(e) {
@@ -58,15 +52,21 @@ function setImgCaption() {
   }
 }
 
+function resetCaptionTimer() {
+  IMG_CAPTION.hidden = true;
+  setTimeout(function () {
+    IMG_CAPTION.hidden = false;
+  }, 2000);
+}
+
 function setGalleryColor(dirStr) {
   SUB_HEADING.style.color = `var(--${dirStr.toLowerCase().slice(0, 3)})`;
   PREV_IMG_BTN.style.color = `var(--${dirStr.toLowerCase().slice(0, 3)})`;
   NEXT_IMG_BTN.style.color = `var(--${dirStr.toLowerCase().slice(0, 3)})`;
 }
 
-function resetCaptionTimer() {
-  IMG_CAPTION.hidden = true;
-  setTimeout(function () {
-    IMG_CAPTION.hidden = false;
-  }, 2000);
+function correctColorBrightness(num) {
+  SUB_HEADING.style.setProperty('filter', `brightness(${num}%)`);
+  NEXT_IMG_BTN.style.setProperty('filter', `brightness(${num}%)`);
+  PREV_IMG_BTN.style.setProperty('filter', `brightness(${num}%)`);
 }

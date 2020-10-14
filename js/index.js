@@ -36,24 +36,19 @@ IMG_TITLE_LOC_SEP.hidden = true;
 // EVENT LISTENERS
 ABOUT.addEventListener('click', displayAboutPage);
 BOTANICAL.addEventListener('click', () => {
-  selectGallery(0);
-  SUB_HEADING.style.setProperty('filter', 'brightness(125%)');
+  selectGallery(0, 125);
 });
 FINLAND.addEventListener('click', () => {
-  selectGallery(1);
-  SUB_HEADING.style.setProperty('filter', 'brightness(175%)');
+  selectGallery(1, 175);
 });
 FOREST.addEventListener('click', () => {
-  selectGallery(2);
-  SUB_HEADING.style.setProperty('filter', 'brightness(125%)');
+  selectGallery(2, 125);
 });
 IRELAND.addEventListener('click', () => {
-  selectGallery(3);
-  SUB_HEADING.style.setProperty('filter', 'brightness(100%)');
+  selectGallery(3, 100);
 });
 PSYCHO.addEventListener('click', () => {
-  selectGallery(4);
-  SUB_HEADING.style.setProperty('filter', 'brightness(100%)');
+  selectGallery(4, 100);
 });
 NEXT_IMG_BTN.addEventListener('click', displayNextImg);
 PREV_IMG_BTN.addEventListener('click', displayPrevImg);
@@ -70,25 +65,25 @@ function displayRandomImg() {
 
 function displayAboutPage() {
   setPrevGallery();
+  activeGallery = undefined;
   ABOUT.innerText = '';
   ABOUT.style.marginLeft = '-1em';
   SUB_HEADING.innerText = 'About';
   SUB_HEADING.style.color = 'var(--default)';
   IMG_CONTAINER.style.setProperty('display', 'none');
-  hideNavArrows();
   ABOUT_PAGE.style.setProperty('display', 'block');
-  activeGallery = undefined;
 }
 
-function selectGallery(key) {
-  ABOUT.innerText = 'About';
-  ABOUT.style.marginLeft = '';
+function selectGallery(key, brightCorrNum) {
   setPrevGallery();
   activeGallery = key;
+  ABOUT.innerText = 'About';
+  ABOUT.style.marginLeft = '';
   SUB_HEADING.innerText = GALLERY_MENU_LINKS[key].innerText;
   GALLERY_MENU_LINKS[key].innerText = '';
   GALLERY_MENU_LINKS[key].style.marginLeft = '-1em';
   setGalleryColor(GALLERIES[key].dirName);
+  correctColorBrightness(brightCorrNum);
   currentImgNum = GALLERIES[key].imgs.indexOf(GALLERIES[key].imgs[0]);
   DISPLAY_IMG.src = `/${GALLERIES.dirName}/${GALLERIES[key].dirName}/${GALLERIES[key].imgs[currentImgNum].file}`;
   displayGallery();
