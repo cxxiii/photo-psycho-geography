@@ -179,11 +179,11 @@ nav ul li a:hover {
 }
 
 .nav-btn-active {
-  opacity: 0.75;
+  opacity: 1;
 }
 
 .nav-btn-inactive {
-  opacity: 0.25;
+  opacity: 0.33;
 }
 
 aside {
