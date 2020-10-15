@@ -47,6 +47,36 @@ a:hover {
   display: none;
 }
 
+.default {
+  color: var(--default);
+  filter: brightness(100%);
+}
+.bot,
+[class*='botanical']:hover {
+  color: var(--bot);
+  filter: brightness(125%);
+}
+.fin,
+[class*='finland']:hover {
+  color: var(--fin);
+  filter: brightness(200%);
+}
+.for,
+[class*='forest']:hover {
+  color: var(--for);
+  filter: brightness(150%);
+}
+.ire,
+[class*='ireland']:hover {
+  color: var(--ire);
+  filter: brightness(100%);
+}
+.psy,
+[class*='psycho']:hover {
+  color: var(--psy);
+  filter: brightness(100%);
+}
+
 /* HEADER */
 header {
   line-height: 0;
@@ -114,68 +144,6 @@ nav ul li a:hover {
   transition: all 0.1s ease;
 }
 
-.default {
-  color: var(--default);
-  filter: brightness(100%);
-}
-.bot,
-[class*='botanical']:hover {
-  color: var(--bot);
-  filter: brightness(125%);
-}
-.fin,
-[class*='finland']:hover {
-  color: var(--fin);
-  filter: brightness(175%);
-}
-.for,
-[class*='forest']:hover {
-  color: var(--for);
-  filter: brightness(150%);
-}
-.ire,
-[class*='ireland']:hover {
-  color: var(--ire);
-  filter: brightness(100%);
-}
-.psy,
-[class*='psycho']:hover {
-  color: var(--psy);
-  filter: brightness(100%);
-}
-
-/* ABOUT PAGE */
-#about-page {
-  display: block;
-  padding: 50px;
-}
-
-#about-img {
-  position: static;
-  pointer-events: none;
-  width: 50%;
-}
-
-figcaption {
-  font-size: xx-small;
-}
-
-#text-content {
-  font-size: 13px;
-  text-align: justify;
-  width: 50%;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-#text-content a {
-  color: var(--default);
-}
-
-#contact {
-  position: absolute;
-}
-
 /* IMAGE CONTAINER */
 #image-container {
   display: flex;
@@ -227,6 +195,38 @@ aside {
 
 aside #img-location {
   font-style: italic;
+}
+
+/* ABOUT PAGE */
+#about-page {
+  display: block;
+  padding: 50px;
+}
+
+#about-img {
+  position: static;
+  pointer-events: none;
+  width: 50%;
+}
+
+figcaption {
+  font-size: xx-small;
+}
+
+#text-content {
+  font-size: 13px;
+  text-align: justify;
+  width: 50%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#text-content a {
+  color: var(--default);
+}
+
+#contact {
+  position: absolute;
 }
 
 /* ANIMATIONS */
