@@ -1,19 +1,19 @@
 // Written by Nikolay Rademacher, github.com/cxxiii
 
 // HELPER FUNCTIONS
-function displayGallery() {
-  ABT_PG_WRAPPER.classList.add('no-display');
-  IMG_CONT_WRAPPER.classList.remove('no-display');
-  displayNavArrows();
-  setImgCaption();
-}
-
 function setPrevGallery() {
   prevGallery = activeGallery;
   if (prevGallery !== undefined) {
     GALLERY_MENU_LINKS[prevGallery].innerText = GALLERIES[prevGallery].dirName;
     GALLERY_MENU_LINKS[prevGallery].classList.remove('correct-offset');
   }
+}
+
+function displayGallery() {
+  ABT_PG_WRAPPER.classList.add('no-display');
+  IMG_CONT_WRAPPER.classList.remove('no-display');
+  displayNavArrows();
+  setImgCaption();
 }
 
 function displayGalleryImg() {

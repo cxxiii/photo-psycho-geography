@@ -67,10 +67,12 @@ function displayRandomImg() {
 function displayAboutPage() {
   setPrevGallery();
   activeGallery = undefined;
+
   ABOUT.innerText = '';
   ABOUT.classList.add('correct-offset');
   SUB_HEADING.innerText = 'About';
   SUB_HEADING.className = 'default';
+
   IMG_CONT_WRAPPER.classList.add('no-display');
   ABT_PG_WRAPPER.classList.remove('no-display');
 }
