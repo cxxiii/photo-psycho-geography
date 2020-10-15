@@ -42,10 +42,12 @@ a:hover {
   color: var(--default);
 }
 
-#subheading,
-.nav-arrow,
-nav ul li a:hover {
-  filter: saturate(0.5);
+.no-display {
+  display: none;
+}
+
+.correct-offset {
+  margin-left: -1em;
 }
 
 /* HEADER */
@@ -100,7 +102,6 @@ nav ul li {
   font-weight: 700;
   display: inline;
   margin-left: 1em;
-  /* animation: fadeIn ease 5s; */
 }
 
 nav ul li a {
@@ -112,34 +113,40 @@ nav ul li a:hover {
   transition: all 0.15s ease;
 }
 
+.default {
+  color: var(--default);
+  filter: brightness(100%);
+}
+.bot,
 [class*='botanical']:hover {
   color: var(--bot);
+  filter: brightness(125%);
 }
+.fin,
 [class*='finland']:hover {
   color: var(--fin);
+  filter: brightness(175%);
 }
+.for,
 [class*='forest']:hover {
   color: var(--for);
+  filter: brightness(150%);
 }
+.ire,
 [class*='ireland']:hover {
   color: var(--ire);
+  filter: brightness(100%);
 }
+.psy,
 [class*='psycho']:hover {
   color: var(--psy);
+  filter: brightness(100%);
 }
 
 /* ABOUT PAGE */
 #about-page {
-  display: none;
+  display: block;
   padding: 50px;
-}
-
-#text-content {
-  font-size: 13px;
-  text-align: justify;
-  width: 50%;
-  margin-right: auto;
-  margin-left: auto;
 }
 
 #about-img {
@@ -150,6 +157,14 @@ nav ul li a:hover {
 
 figcaption {
   font-size: xx-small;
+}
+
+#text-content {
+  font-size: 13px;
+  text-align: justify;
+  width: 50%;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 #text-content a {
@@ -175,7 +190,6 @@ figcaption {
 }
 
 .nav-arrow {
-  display: none;
   position: absolute;
   font-family: 'Cinzel', serif;
   font-size: 4em;
@@ -188,12 +202,18 @@ figcaption {
 #arrow-right {
   right: 0;
   left: auto;
-  opacity: 0.75;
 }
 
 #arrow-left {
   left: 0;
   right: auto;
+}
+
+.nav-btn-active {
+  opacity: 0.75;
+}
+
+.nav-btn-inactive {
   opacity: 0.25;
 }
 

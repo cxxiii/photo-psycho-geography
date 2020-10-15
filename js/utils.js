@@ -2,8 +2,8 @@
 
 // HELPER FUNCTIONS
 function displayGallery() {
-  ABOUT_PAGE.style.setProperty('display', 'none');
-  IMG_CONTAINER.style.setProperty('display', 'flex');
+  ABT_PG_WRAPPER.classList.add('no-display');
+  IMG_CONT_WRAPPER.classList.remove('no-display');
   displayNavArrows();
   setImgCaption();
 }
@@ -12,7 +12,7 @@ function setPrevGallery() {
   prevGallery = activeGallery;
   if (prevGallery !== undefined) {
     GALLERY_MENU_LINKS[prevGallery].innerText = GALLERIES[prevGallery].dirName;
-    GALLERY_MENU_LINKS[prevGallery].style.marginLeft = '';
+    GALLERY_MENU_LINKS[prevGallery].classList.remove('correct-offset');
   }
 }
 
@@ -22,11 +22,10 @@ function displayGalleryImg() {
 }
 
 function displayNavArrows() {
-  for (navArrow of NAV_ARROWS) {
-    navArrow.style.setProperty('display', 'initial');
-  }
-  NEXT_IMG_BTN.style.opacity = 0.75;
-  PREV_IMG_BTN.style.opacity = 0.25;
+  NEXT_IMG_BTN.classList.remove('no-display');
+  PREV_IMG_BTN.classList.remove('no-display');
+  NEXT_IMG_BTN.classList.replace('nav-btn-inactive', 'nav-btn-active');
+  PREV_IMG_BTN.classList.replace('nav-btn-active', 'nav-btn-inactive');
 }
 
 function navByArrowKeys(e) {
@@ -60,13 +59,9 @@ function resetCaptionTimer() {
 }
 
 function setGalleryColor(dirStr) {
-  SUB_HEADING.style.color = `var(--${dirStr.toLowerCase().slice(0, 3)})`;
-  PREV_IMG_BTN.style.color = `var(--${dirStr.toLowerCase().slice(0, 3)})`;
-  NEXT_IMG_BTN.style.color = `var(--${dirStr.toLowerCase().slice(0, 3)})`;
-}
-
-function correctColorBrightness(num) {
-  SUB_HEADING.style.setProperty('filter', `brightness(${num}%)`);
-  NEXT_IMG_BTN.style.setProperty('filter', `brightness(${num}%)`);
-  PREV_IMG_BTN.style.setProperty('filter', `brightness(${num}%)`);
+  SUB_HEADING.className = `${dirStr.toLowerCase().slice(0, 3)}`;
+  NEXT_IMG_BTN.classList.remove('bot', 'fin', 'for', 'ire', 'psy');
+  NEXT_IMG_BTN.classList.add(`${dirStr.toLowerCase().slice(0, 3)}`);
+  PREV_IMG_BTN.classList.remove('bot', 'fin', 'for', 'ire', 'psy');
+  PREV_IMG_BTN.classList.add(`${dirStr.toLowerCase().slice(0, 3)}`);
 }
