@@ -30,7 +30,7 @@ body {
   height: 100%;
   min-height: 100%;
   opacity: 1;
-  transition: all ease 0.1s;
+  transition: all ease 0.2s;
 }
 
 a,
@@ -110,7 +110,7 @@ h1 {
   font-size: 20px;
   font-weight: lighter;
   letter-spacing: 0.04em;
-  transition: color ease 0.1s;
+  transition: color ease 0.2s;
 }
 
 /* NAVIGATION MENU */
@@ -141,7 +141,7 @@ nav ul li a {
 
 nav ul li a:hover {
   cursor: pointer;
-  transition: all 0.1s ease;
+  transition: color 0.2s ease;
 }
 
 /* IMAGE CONTAINER */
@@ -165,7 +165,7 @@ nav ul li a:hover {
   cursor: pointer;
   line-height: 0;
   margin: 75px;
-  transition: color ease 0.1s;
+  transition: color ease 0.2s;
 }
 
 #arrow-right {
