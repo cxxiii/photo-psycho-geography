@@ -184,6 +184,7 @@ nav ul li a:hover {
 
 .nav-btn-inactive {
   opacity: 0.33;
+  cursor: default;
 }
 
 aside {
