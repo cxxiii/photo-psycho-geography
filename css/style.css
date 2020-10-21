@@ -4,7 +4,7 @@
 
 :root {
   --default: whitesmoke;
-  --default-bg: black;
+  --default-bg: rgb(0, 0, 0);
   --bot: #006400;
   --fin: #002f6c;
   --for: #663300;
