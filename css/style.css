@@ -4,7 +4,7 @@
 
 :root {
   --default: whitesmoke;
-  --default-bg: black;
+  --default-bg: rgb(0, 0, 0);
   --bot: #006400;
   --fin: #002f6c;
   --for: #663300;
@@ -184,6 +184,7 @@ nav ul li a:hover {
 
 .nav-btn-inactive {
   opacity: 0.33;
+  cursor: default;
 }
 
 aside {

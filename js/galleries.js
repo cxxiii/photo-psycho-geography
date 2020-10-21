@@ -278,7 +278,7 @@ const GALLERIES = {
       { file: 'p10.jpg', title: 'Stuck in the wrong place.' },
       { file: 'p11.jpg', title: 'Alienated.' },
       { file: 'p12.jpg', title: 'In the realm of the subconscious.' },
-      { file: 'p13.jpg', title: 'Confusion' },
+      { file: 'p13.jpg', title: 'Confusion.' },
       {
         file: 'p14.jpg',
         title:
