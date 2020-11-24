@@ -2,7 +2,7 @@ import React from 'react'
 import { Global, css } from '@emotion/react'
 import Helmet from 'react-helmet'
 import useSiteMetadata from '../hooks/useSiteMetadata'
-import NavHeader from './NavHeader'
+// import NavHeader from './NavHeader'
 
 const Layout = ({ children }) => {
   const { title, description } = useSiteMetadata()

@@ -6,7 +6,7 @@ import NavHeader from '../components/NavHeader'
 export default () => (
   <Layout>
     <NavHeader
-      subheading={
+      subHeading={
         <>
           {' '}
           <span className="one">Photo·</span>

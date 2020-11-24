@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from '../components/Layout'
-import Image from '../components/Image'
+// import Image from '../components/Image'
 import NavHeader from '../components/NavHeader'
 
 export default () => (

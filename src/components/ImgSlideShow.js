@@ -1,15 +1,15 @@
-import React, { useState } from 'react'
-import styled from '@emotion/styled'
+import React, { useState, useEffect, useCallback } from 'react'
+// import styled from '@emotion/styled'
 import GALLERIES from '../galleries'
 import Layout from './Layout'
 
 const getRandomImg = () => {
   const imgs = []
   const randomGallery = Math.floor(Math.random() * 5)
-  const currentImgNum = Math.floor(
+  const randomImgNum = Math.floor(
     Math.random() * GALLERIES[randomGallery].imgs.length,
   )
-  imgs.push(GALLERIES[randomGallery].imgs[currentImgNum])
+  imgs.push(GALLERIES[randomGallery].imgs[randomImgNum])
   return imgs
 }
 
@@ -20,43 +20,34 @@ const ImgSlideShow = ({
   showCaptions,
 }) => {
   const [image, setImage] = useState(imgs[0])
+
   let currentImgNum = imgs.indexOf(image)
 
-  const displayNextImg = () => {
-    if (currentImgNum + 2 === imgs.length) {
-      document
-        .querySelector('#arrow-right')
-        .classList.replace('nav-btn-active', 'nav-btn-inactive')
-    }
+  const displayNextImg = useCallback(() => {
     if (currentImgNum + 1 === imgs.length) return
-    document
-      .querySelector('#arrow-left')
-      .classList.replace('nav-btn-inactive', 'nav-btn-active')
     setImage(imgs[++currentImgNum])
     resetCaptionTimer()
-  }
+  }, [currentImgNum, imgs])
 
-  const displayPrevImg = () => {
-    if (currentImgNum - 1 === 0) {
-      document
-        .querySelector('#arrow-left')
-        .classList.replace('nav-btn-active', 'nav-btn-inactive')
-    }
+  const displayPrevImg = useCallback(() => {
     if (currentImgNum - 1 === -1) return
-    document
-      .querySelector('#arrow-right')
-      .classList.replace('nav-btn-inactive', 'nav-btn-active')
     setImage(imgs[--currentImgNum])
-  }
+  }, [currentImgNum, imgs])
 
-  document.addEventListener('keydown', navByArrowKeys)
-  function navByArrowKeys(e) {
-    if (e.code === 'ArrowRight') {
-      displayNextImg()
-    } else if (e.code === 'ArrowLeft') {
-      displayPrevImg()
-    } else return
-  }
+  useEffect(() => {
+    const navByArrowKeys = e => {
+      if (e.code === 'ArrowRight') {
+        displayNextImg()
+      } else if (e.code === 'ArrowLeft') {
+        displayPrevImg()
+      } else return
+    }
+    window.addEventListener('keydown', navByArrowKeys)
+
+    return () => {
+      window.removeEventListener('keydown', navByArrowKeys)
+    }
+  }, [displayNextImg, displayPrevImg])
 
   const resetCaptionTimer = () => {
     document.querySelector('aside').hidden = true
@@ -72,25 +63,37 @@ const ImgSlideShow = ({
           <>
             <div
               id="arrow-left"
-              className={`nav-arrow nav-btn-inactive`}
+              role="button"
+              tabIndex="0"
+              className={`nav-arrow ${
+                currentImgNum === 0 ? 'nav-btn-inactive' : 'nav-btn-active'
+              }`}
               title="View previous image"
               onClick={displayPrevImg}
+              onKeyDown={displayPrevImg}
               style={{ color: color }}
             >
               ‹
             </div>
             <div
               id="arrow-right"
-              className="nav-arrow nav-btn-active"
+              role="button"
+              tabIndex="0"
+              className={`nav-arrow ${
+                currentImgNum + 1 === imgs.length
+                  ? 'nav-btn-inactive'
+                  : 'nav-btn-active'
+              }`}
               title="View next image"
               onClick={displayNextImg}
+              onKeyDown={displayNextImg}
               style={{ color: color }}
             >
               ›
             </div>
           </>
         )}
-        <img id="display-img" src={image.file} />
+        <img id="display-img" src={image.file} alt="" />
         {showCaptions && image.title && (
           <aside>
             <span id="img-title" className="one">

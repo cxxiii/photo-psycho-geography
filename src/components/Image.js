@@ -1,11 +1,11 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
-import facepaint from 'facepaint'
+// import facepaint from 'facepaint'
 
-const breakpoints = [576, 768, 992, 1200]
+// const breakpoints = [576, 768, 992, 1200]
 
-const mq = facepaint(breakpoints.map(bp => `@media (max-width: ${bp}px)`))
+// const mq = facepaint(breakpoints.map(bp => `@media (max-width: ${bp}px)`))
 
 const Image = ({ path, alt = '' }) => {
   const data = useStaticQuery(graphql`
