@@ -17,12 +17,5 @@ module.exports = {
         analyzerMode: 'static',
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `assets`,
-        name: `assets`,
-      },
-    },
   ],
 }
