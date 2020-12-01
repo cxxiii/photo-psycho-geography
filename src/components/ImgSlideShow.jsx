@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-// import styled from '@emotion/styled'
+import styled from '@emotion/styled';
 import GALLERIES from '../galleries';
 import Layout from './Layout';
 
@@ -12,6 +12,59 @@ const getRandomImg = () => {
   imgs.push(GALLERIES[randomGallery].imgs[randomImgNum]);
   return imgs;
 };
+
+const ImageSlider = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  & #display-img {
+    height: 80vh;
+    max-width: 100%;
+    margin: 50px;
+    pointer-events: none;
+  }
+
+  & .nav-arrow {
+    position: absolute;
+    font-family: 'Cinzel', serif;
+    font-size: 4em;
+    cursor: pointer;
+    line-height: 0;
+    margin: 75px;
+    transition: color ease 0.2s;
+  }
+
+  & #arrow-right {
+    right: 0;
+    left: auto;
+  }
+
+  & #arrow-left {
+    left: 0;
+    right: auto;
+  }
+
+  &.nav-btn-active {
+    opacity: 1;
+  }
+
+  & .nav-btn-inactive {
+    opacity: 0.33;
+    cursor: default;
+  }
+
+  & aside {
+    font-size: 13px;
+    font-weight: lighter;
+    position: absolute;
+    align-self: flex-end;
+  }
+
+  & aside #img-location {
+    font-style: italic;
+  }
+`;
 
 const ImgSlideShow = ({
   imgs = getRandomImg(),
@@ -58,7 +111,7 @@ const ImgSlideShow = ({
 
   return (
     <Layout>
-      <div id="image-container">
+      <ImageSlider>
         {showNavArrows && (
           <>
             <div
@@ -112,7 +165,7 @@ const ImgSlideShow = ({
             )}
           </aside>
         )}
-      </div>
+      </ImageSlider>
     </Layout>
   );
 };

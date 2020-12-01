@@ -1,11 +1,43 @@
 import React from 'react';
+import styled from '@emotion/styled';
 import Layout from '../components/Layout';
 import NavHeader from '../components/NavHeader';
+
+const AboutPage = styled.div`
+  display: block;
+  padding: 50px;
+
+  #about-img {
+    position: static;
+    pointer-events: none;
+    width: 50%;
+  }
+
+  figcaption {
+    font-size: xx-small;
+  }
+
+  #text-content {
+    font-size: 13px;
+    text-align: justify;
+    width: 50%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  #text-content a {
+    color: var(--default);
+  }
+
+  #contact {
+    position: absolute;
+  }
+`;
 
 export default () => (
   <Layout>
     <NavHeader subHeading="About" />
-    <div id="about-page">
+    <AboutPage>
       <img id="about-img" src="/images/Biography.jpg" alt="Katja" />
       <figcaption>Photo: Kaj Wuorisalo</figcaption>
       <div id="text-content">
@@ -119,6 +151,6 @@ export default () => (
           </p>
         </div>
       </div>
-    </div>
+    </AboutPage>
   </Layout>
 );
