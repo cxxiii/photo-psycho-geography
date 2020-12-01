@@ -2,7 +2,7 @@ import React from 'react';
 import { Global, css } from '@emotion/react';
 import Head from 'next/head';
 
-const Layout = ({ children }) => {
+function MyApp({ Component, pageProps }) {
   return (
     <>
       <Global
@@ -180,9 +180,9 @@ const Layout = ({ children }) => {
       <Head>
         <link rel="shortcut icon" href="/public/favicon.ico" />
       </Head>
-      <main>{children}</main>
+      <Component {...pageProps} />
     </>
   );
-};
+}
 
-export default Layout;
+export default MyApp;

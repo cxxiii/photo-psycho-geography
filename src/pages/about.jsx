@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import Layout from '../components/Layout';
 import NavHeader from '../components/NavHeader';
 
 const AboutPage = styled.div`
@@ -35,7 +34,7 @@ const AboutPage = styled.div`
 `;
 
 export default () => (
-  <Layout>
+  <>
     <NavHeader subHeading="About" />
     <AboutPage>
       <img id="about-img" src="/images/Biography.jpg" alt="Katja" />
@@ -152,5 +151,5 @@ export default () => (
         </div>
       </div>
     </AboutPage>
-  </Layout>
+  </>
 );

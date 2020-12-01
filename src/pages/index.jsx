@@ -1,10 +1,9 @@
 import React from 'react';
 import ImgSlideShow from '../components/ImgSlideShow';
-import Layout from '../components/Layout';
 import NavHeader from '../components/NavHeader';
 
 export default () => (
-  <Layout>
+  <>
     <NavHeader
       subHeading={
         <>
@@ -16,5 +15,5 @@ export default () => (
       }
     />
     <ImgSlideShow />
-  </Layout>
+  </>
 );
