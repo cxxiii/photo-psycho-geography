@@ -178,7 +178,7 @@ function MyApp({ Component, pageProps }) {
         `}
       />
       <Head>
-        <link rel="shortcut icon" href="/public/favicon.ico" />
+        <link rel="shortcut icon" href="/favicon-32x32.png" />
       </Head>
       <Component {...pageProps} />
     </>
