@@ -1,16 +1,46 @@
-import React from 'react'
-import Layout from '../components/Layout'
-// import Image from '../components/Image'
-import NavHeader from '../components/NavHeader'
+import React from 'react';
+import styled from '@emotion/styled';
+import NavHeader from '../components/NavHeader';
+
+const AboutPage = styled.div`
+  display: block;
+  padding: 50px;
+
+  #about-img {
+    position: static;
+    pointer-events: none;
+    width: 50%;
+  }
+
+  figcaption {
+    font-size: xx-small;
+  }
+
+  #text-content {
+    font-size: 13px;
+    text-align: justify;
+    width: 50%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  #text-content a {
+    color: var(--default);
+  }
+
+  #contact {
+    position: absolute;
+  }
+`;
 
 export default () => (
-  <Layout>
+  <>
     <NavHeader subHeading="About" />
-    <div id="about-page">
+    <AboutPage>
       <img id="about-img" src="/images/Biography.jpg" alt="Katja" />
       <figcaption>Photo: Kaj Wuorisalo</figcaption>
       <div id="text-content">
-        <div class="one">
+        <div className="one">
           <p>I was born in Bielefeld, Germany, on the first of June in 1966.</p>
           <p>
             As my father happened to be a passionate traveller he took my
@@ -35,7 +65,7 @@ export default () => (
             village called Gemmenich.
           </p>
         </div>
-        <div class="two">
+        <div className="two">
           <p>
             But one country, which my family and I hit in the mid 1970s, left a
             lifelong impression on me: Ireland, and there, the Dingle Peninsula.
@@ -64,7 +94,7 @@ export default () => (
             is a red thread in my life.
           </p>
         </div>
-        <div class="three">
+        <div className="three">
           <p>
             In 1997 I graduated from Aachen University with a degree in Visual
             Communication/Graphic Design and lost myself a little bit in the
@@ -120,6 +150,6 @@ export default () => (
           </p>
         </div>
       </div>
-    </div>
-  </Layout>
-)
+    </AboutPage>
+  </>
+);

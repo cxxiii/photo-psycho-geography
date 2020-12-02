@@ -1,4 +1,4 @@
-# NextJS
+# Next files
 .next
 
 # Logs
@@ -56,10 +56,6 @@ typings/
 
 # dotenv environment variables file
 .env
-
-# gatsby files
-.cache/
-public
 
 # Mac files
 .DS_Store

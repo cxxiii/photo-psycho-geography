@@ -1,7 +1,7 @@
-import React from 'react'
-import ImgSlideShow from '../../components/ImgSlideShow'
-import NavHeader from '../../components/NavHeader'
-import GALLERIES from '../../galleries'
+import React from 'react';
+import ImgSlideShow from '../../components/ImgSlideShow';
+import NavHeader from '../../components/NavHeader';
+import GALLERIES from '../../galleries';
 
 export default () => (
   <>
@@ -13,4 +13,4 @@ export default () => (
       showCaptions={true}
     />
   </>
-)
+);

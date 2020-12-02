@@ -1,6 +1,3 @@
-// Written by Nikolay Rademacher, github.com/cxxiii
-
-// GALLERIES DATA CONSTANT
 const GALLERIES = {
   0: {
     imgs: [
@@ -535,6 +532,6 @@ const GALLERIES = {
       { file: '/images/galleries/Psycho/p37.jpg', title: 'Delusional' },
     ],
   },
-}
+};
 
-export default GALLERIES
+export default GALLERIES;

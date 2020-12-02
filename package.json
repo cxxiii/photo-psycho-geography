@@ -1,43 +1,43 @@
 {
   "name": "katja-website",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "This is a personal/photography website, [katjaschmelzer.de](https://www.katjaschmelzer.de/), I made for a family member.",
   "main": "index.js",
   "scripts": {
-    "build": "gatsby build",
-    "dev": "cross-env GATSBY_GRAPHQL_IDE=playground gatsby develop",
-    "format": "prettier --write src/**/*.{js,jsx}",
-    "start": "npm run dev",
-    "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
-    "analyze": "cross-env ANALYZE_BUNDLE_SIZE=true gatsby build"
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cxxiii/katja-website.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "personal",
+    "photography",
+    "homepage"
+  ],
+  "author": "Nikolay Rademacher",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/cxxiii/katja-website/issues"
   },
   "homepage": "https://github.com/cxxiii/katja-website#readme",
   "dependencies": {
-    "@emotion/core": "10.0.22",
     "@emotion/react": "^11.0.0",
-    "@emotion/styled": "10.0.23",
+    "@emotion/styled": "11.0.0",
     "facepaint": "^1.2.1",
-    "gatsby": "^2.26.0",
-    "gatsby-plugin-emotion": "^4.4.0",
-    "gatsby-plugin-react-helmet": "^3.4.0",
-    "prop-types": "^15.7.2",
+    "next": "^10.0.3",
+    "next-connect": "^0.9.1",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-helmet": "^6.1.0"
+    "react-dom": "^17.0.1"
   },
   "devDependencies": {
-    "cross-env": "^7.0.2",
+    "@types/node": "^14.14.10",
+    "@types/react": "^17.0.0",
+    "dotenv-load": "^2.0.0",
+    "next-env": "^1.1.1",
+    "typescript": "^4.1.2",
     "prettier": "^2.1.2"
   }
 }
