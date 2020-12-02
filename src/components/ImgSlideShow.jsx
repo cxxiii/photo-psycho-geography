@@ -12,6 +12,13 @@ const getRandomImg = () => {
   return imgs;
 };
 
+const resetCaptionTimer = () => {
+  document.querySelector('aside').hidden = true;
+  setTimeout(() => {
+    document.querySelector('aside').hidden = false;
+  }, 1000);
+};
+
 const ImageSlider = styled.div`
   display: flex;
   align-items: center;
@@ -73,17 +80,17 @@ const ImgSlideShow = ({
 }) => {
   const [image, setImage] = useState(imgs[0]);
 
-  let currentImgNum = imgs.indexOf(image);
+  const currentImgNum = imgs.indexOf(image);
 
   const displayNextImg = useCallback(() => {
     if (currentImgNum + 1 === imgs.length) return;
-    setImage(imgs[++currentImgNum]);
+    setImage(imgs[currentImgNum + 1]);
     resetCaptionTimer();
   }, [currentImgNum, imgs]);
 
   const displayPrevImg = useCallback(() => {
     if (currentImgNum - 1 === -1) return;
-    setImage(imgs[--currentImgNum]);
+    setImage(imgs[currentImgNum - 1]);
   }, [currentImgNum, imgs]);
 
   useEffect(() => {
@@ -92,7 +99,7 @@ const ImgSlideShow = ({
         displayNextImg();
       } else if (e.code === 'ArrowLeft') {
         displayPrevImg();
-      } else return;
+      }
     };
     window.addEventListener('keydown', navByArrowKeys);
 
@@ -100,13 +107,6 @@ const ImgSlideShow = ({
       window.removeEventListener('keydown', navByArrowKeys);
     };
   }, [displayNextImg, displayPrevImg]);
-
-  const resetCaptionTimer = () => {
-    document.querySelector('aside').hidden = true;
-    setTimeout(() => {
-      document.querySelector('aside').hidden = false;
-    }, 1000);
-  };
 
   return (
     <ImageSlider>
@@ -122,7 +122,7 @@ const ImgSlideShow = ({
             title="View previous image"
             onClick={displayPrevImg}
             onKeyDown={displayPrevImg}
-            style={{ color: color }}
+            style={{ color }}
           >
             ‹
           </div>
@@ -138,7 +138,7 @@ const ImgSlideShow = ({
             title="View next image"
             onClick={displayNextImg}
             onKeyDown={displayNextImg}
-            style={{ color: color }}
+            style={{ color }}
           >
             ›
           </div>
