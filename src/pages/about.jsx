@@ -33,7 +33,7 @@ const AboutPage = styled.div`
   }
 `;
 
-export default () => (
+export default function About() {
   <>
     <NavHeader subHeading="About" />
     <AboutPage>
@@ -151,5 +151,5 @@ export default () => (
         </div>
       </div>
     </AboutPage>
-  </>
-);
+  </>;
+}
