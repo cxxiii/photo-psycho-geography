@@ -2,7 +2,7 @@ import React from 'react';
 import ImgSlideShow from '../components/ImgSlideShow';
 import NavHeader from '../components/NavHeader';
 
-export default () => (
+export default function Index() {
   <>
     <NavHeader
       subHeading={
@@ -15,5 +15,5 @@ export default () => (
       }
     />
     <ImgSlideShow />
-  </>
-);
+  </>;
+}

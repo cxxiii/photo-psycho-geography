@@ -9,8 +9,8 @@ export default () => (
     <ImgSlideShow
       imgs={GALLERIES[0].imgs}
       color="var(--bot)"
-      showNavArrows={true}
-      showCaptions={true}
+      showNavArrows
+      showCaptions
     />
   </>
 );
