@@ -3,28 +3,18 @@ import styled from '@emotion/styled';
 import Link from 'next/link';
 
 const Header = styled.div`
-  line-height: 0;
-  margin-top: 40px;
-
-  & h1 {
-    letter-spacing: 4px;
-    font-weight: 100;
-    position: sticky;
-  }
-  & .deco {
+  .deco {
     font-family: 'Cinzel Decorative';
   }
 
-  & #name {
-    position: absolute;
-    right: 290px;
-    left: 0;
-    letter-spacing: 0;
+  #name {
+    font-weight: 100;
+    letter-spacing: 0.01rem;
+    margin-right: 1rem;
   }
 
-  & #subheading {
-    position: absolute;
-    font-size: 20px;
+  #subheading {
+    font-size: 2.5rem;
     font-weight: lighter;
     letter-spacing: 0.04em;
     transition: color ease 0.2s;
@@ -32,13 +22,7 @@ const Header = styled.div`
 `;
 
 const Nav = styled.nav`
-  position: absolute;
   text-decoration: none;
-  top: 50px;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  line-height: 0;
 
   a,
   li {

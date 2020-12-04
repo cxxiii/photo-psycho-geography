@@ -22,52 +22,52 @@ const resetCaptionTimer = () => {
 const ImageSlider = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
+  flex-direction: column;
 
-  & #display-img {
+  #display-img {
     height: 80vh;
     max-width: 100%;
-    margin: 50px;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
     pointer-events: none;
   }
 
-  & .nav-arrow {
+  .nav-arrow {
     position: absolute;
     font-family: 'Cinzel', serif;
-    font-size: 4em;
+    font-size: 4rem;
     cursor: pointer;
     line-height: 0;
-    margin: 75px;
+    margin: 8rem;
     transition: color ease 0.2s;
   }
 
-  & #arrow-right {
+  #arrow-right {
     right: 0;
     left: auto;
   }
 
-  & #arrow-left {
+  #arrow-left {
     left: 0;
     right: auto;
   }
 
-  &.nav-btn-active {
+  .nav-btn-active {
     opacity: 1;
   }
 
-  & .nav-btn-inactive {
+  .nav-btn-inactive {
     opacity: 0.33;
     cursor: default;
   }
 
-  & aside {
-    font-size: 13px;
+  aside {
+    font-size: 1.3rem;
     font-weight: lighter;
-    position: absolute;
-    align-self: flex-end;
   }
 
-  & aside #img-location {
+  aside #img-location {
     font-style: italic;
   }
 `;
