@@ -72,7 +72,7 @@ const ImageSlider = styled.div`
   }
 `;
 
-const ImgSlideShow = ({
+const ImgSlideShow: React.FunctionComponent<any> = ({
   imgs = getRandomImg(),
   color,
   showNavArrows,

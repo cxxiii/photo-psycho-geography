@@ -51,7 +51,7 @@ const Nav = styled.nav`
   }
 `;
 
-const NavHeader = ({ subHeading, subColor }) => (
+const NavHeader: React.FunctionComponent<any> = ({ subHeading, subColor }) => (
   <>
     <Header>
       <h1>
