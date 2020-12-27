@@ -10,8 +10,8 @@ function MyApp({ Component, pageProps }) {
           @import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Cinzel+Decorative&family=EB+Garamond&display=swap');
 
           :root {
-            --default: whitesmoke;
-            --default-bg: rgb(0, 0, 0);
+            --default: black;
+            --default-bg: white;
             --bot: #006400;
             --fin: #002f6c;
             --for: #663300;
