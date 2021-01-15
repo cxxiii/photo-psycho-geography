@@ -91,7 +91,7 @@ const NavHeader = ({ subHeading, subColor }) => (
             About
           </Link>
         </li>
-        <li className="two">|</li>
+        <li>|</li>
         <li>
           <Link href="/galleries/botanical" className="botanical three">
             Botanical

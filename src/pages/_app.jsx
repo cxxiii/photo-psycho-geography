@@ -179,6 +179,7 @@ function MyApp({ Component, pageProps }) {
       />
       <Head>
         <link rel="icon" href="/favicon-32x32.png" />
+        <title>Katja Schmelzer</title>
       </Head>
       <Component {...pageProps} />
     </>
