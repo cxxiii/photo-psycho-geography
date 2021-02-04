@@ -1,0 +1,43 @@
+.About_container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.About_image {
+  width: 50vw;
+}
+
+.About_imageCaption {
+  font-size: xx-small;
+}
+
+.About_textContent {
+  font-size: 1.6rem;
+  text-align: justify;
+  width: 50vw;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.About_textContent a {
+  color: var(--default);
+}
+
+.About_textContent__contact {
+  position: absolute;
+}
+
+@media (max-width: 600px) {
+  .About_container {
+    margin-top: 1.2rem;
+  }
+
+  .About_image {
+    width: 95vw;
+  }
+
+  .About_textContent {
+    width: 95vw;
+  }
+}

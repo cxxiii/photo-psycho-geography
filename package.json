@@ -2,7 +2,7 @@
   "name": "katja-website",
   "version": "2.0.0",
   "description": "This is a personal/photography website, [katjaschmelzer.de](https://www.katjaschmelzer.de/), I made for a family member.",
-  "main": "index.js",
+  "main": "index.jsx",
   "scripts": {
     "dev": "next",
     "build": "next build",
@@ -24,13 +24,8 @@
   },
   "homepage": "https://github.com/cxxiii/katja-website#readme",
   "dependencies": {
-    "@emotion/react": "^11.0.0",
-    "@emotion/styled": "11.0.0",
     "next": "^10.0.3",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.12.9"
   }
 }
