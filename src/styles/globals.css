@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@100;200;300;400&family=Cinzel+Decorative:wght@100;200;300;400&family=EB+Garamond:wght@100;200;300;400&display=swap');
+
+:root {
+  font-size: 62.5%;
+  --default: #333;
+  --default-bg: white;
+  --bot: #006400;
+  --fin: #002f6c;
+  --for: #663300;
+  --ire: #40c575;
+  --psy: #fd209a;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'EB Garamond', serif;
+  font-size: 1.3rem;
+  background-color: var(--default-bg);
+  color: var(--default);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+  color: inherit;
+  font: inherit;
+}
+
+/* ANIMATIONS */
+.one {
+  animation: fadeIn ease 3s;
+}
+.two {
+  animation: fadeIn ease 6s;
+}
+.three {
+  animation: fadeIn ease 7.5s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

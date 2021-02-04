@@ -1,0 +1,37 @@
+.ImgSlideShow_container {
+  font-family: Cinzel, serif;
+  display: grid;
+  grid-template-columns: 5vw 90vw 5vw;
+  grid-template-rows: 1fr 5vh;
+  justify-items: center;
+  align-items: center;
+  /* margin: auto 0; */
+}
+
+.ImgSlideShow_arrowLeft {
+  grid-column: 1 / 2;
+  font-size: 6rem;
+  cursor: pointer;
+}
+
+.ImgSlideShow_arrowRight {
+  grid-column: 3 / -1;
+  font-size: 6rem;
+  cursor: pointer;
+}
+
+.ImgSlideShow_image {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  max-width: 85vw;
+  max-height: 80vh;
+}
+
+.ImgSlideShow_caption {
+  font-family: 'EB Garamond', serif;
+  font-size: 1.4rem;
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
