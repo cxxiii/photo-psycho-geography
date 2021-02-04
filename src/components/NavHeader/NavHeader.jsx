@@ -5,18 +5,16 @@ import Link from 'next/link';
 const NavHeader = ({ subHeading, subColor }) => (
   <div className={styles.NavHeader_container}>
     <header className={styles.NavHeader_header}>
-      <h1>
-        <span className={styles.NavHeader_header__name}>
-          <span className={styles.NavHeader_header__name___deco}>K</span>atja
-          Schmelzer
-        </span>
-        <span
-          className={styles.NavHeader_header__subHeading}
-          style={{ color: subColor }}
-        >
-          {subHeading}
-        </span>
+      <h1 className={styles.NavHeader_header__name}>
+        <span className={styles.NavHeader_header__name___deco}>K</span>atja
+        Schmelzer
       </h1>
+      <h2
+        className={styles.NavHeader_header__subHeading}
+        style={{ color: subColor }}
+      >
+        {subHeading}
+      </h2>
     </header>
     <nav className={styles.NavHeader_nav}>
       <ul className={styles.NavHeader_nav__menu}>
